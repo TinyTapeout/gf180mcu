@@ -24,15 +24,15 @@ if { ![info exist ::env(IO_PAD_LIBRARY)] } {
 # Lib Files
 set ::env(LIB_SYNTH) "\
     $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/$::env(STD_CELL_LIBRARY)__tt_025C_5v00.lib\
-    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(IO_PAD_LIBRARY)/lib/$::env(IO_PAD_LIBRARY)__tt_025C_5v00.lib\
+    [glob $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(IO_PAD_LIBRARY)/lib/*__tt_025C_5v00.lib]\
 "
 set ::env(LIB_FASTEST) "\
     $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/$::env(STD_CELL_LIBRARY)__ff_n40C_5v50.lib\
-    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(IO_PAD_LIBRARY)/lib/$::env(IO_PAD_LIBRARY)__ff_n40C_5v50.lib\
+    [glob $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(IO_PAD_LIBRARY)/lib/*__ff_n40C_5v50.lib]\
 "
 set ::env(LIB_SLOWEST) "\
     $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/$::env(STD_CELL_LIBRARY)__ss_125C_4v50.lib\
-    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(IO_PAD_LIBRARY)/lib/$::env(IO_PAD_LIBRARY)__ss_125C_4v50.lib\
+    [glob $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(IO_PAD_LIBRARY)/lib/*__ss_125C_4v50.lib]\
 "
 
 set ::env(LIB_TYPICAL) $::env(LIB_SYNTH)
@@ -50,30 +50,31 @@ set ::env(CELL_SPICE_MODELS) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_C
 set ::env(CELL_CDLS)	"$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/cdl/$::env(STD_CELL_LIBRARY).cdl"
 
 # Pad views
-set ::env(PAD_LEFS) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(IO_PAD_LIBRARY)/lef/$::env(IO_PAD_LIBRARY)*.lef"]
-set ::env(PAD_GDS) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(IO_PAD_LIBRARY)/gds/*.gds"]
+set ::env(PAD_LEFS) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(IO_PAD_LIBRARY)/lef/*.lef"]
+# Unfortunately the foundry library must be read in before the ef or ws library (ghost cell)
+# The glob however has the wrong order...
+set ::env(PAD_GDS) [lreverse [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(IO_PAD_LIBRARY)/gds/*.gds"]]
 set ::env(PAD_VERILOG_MODELS) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(IO_PAD_LIBRARY)/verilog/*__blackbox.v"]
 set ::env(PAD_SPICE_MODELS) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(IO_PAD_LIBRARY)/spice/*.spice"]
 set ::env(PAD_CDLS) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(IO_PAD_LIBRARY)/cdl/$::env(IO_PAD_LIBRARY).cdl"
 
 # Pad IO sites
-set ::env(PAD_IO_SITE_NAME) "GF_IO_Site"
+set ::env(PAD_SITE_NAME) "GF_IO_Site"
 set ::env(PAD_CORNER_SITE_NAME) "GF_COR_Site"
 
 # Pad fake IO sites information
-set ::env(PAD_FAKE_IO_SITE_HEIGHT) "350"
-set ::env(PAD_FAKE_IO_SITE_WIDTH) "1"
+set ::env(PAD_FAKE_SITE_HEIGHT) "350"
+set ::env(PAD_FAKE_SITE_WIDTH) "0.1"
 set ::env(PAD_FAKE_CORNER_SITE_HEIGHT) "355"
 set ::env(PAD_FAKE_CORNER_SITE_WIDTH) "355"
 
 # Pad cells
-set ::env(PAD_CELLS) [dict create]
-dict set ::env(PAD_CELLS) "$::env(IO_PAD_LIBRARY)__*" "75, 350"
 set ::env(PAD_CORNER) "$::env(IO_PAD_LIBRARY)__cor"
 set ::env(PAD_FILLERS) "\
     $::env(IO_PAD_LIBRARY)__fill10\
     $::env(IO_PAD_LIBRARY)__fill5\
     $::env(IO_PAD_LIBRARY)__fill1\
+    $::env(IO_PAD_LIBRARY)__fillnc\
 "
 
 # Pad bondpad information (if needed)
@@ -122,22 +123,31 @@ set ::env(DRC_EXCLUDE_CELL_LIST_OPT) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/ope
 set ::env(RCX_RULES) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/rcx_rules.info"
 
 # Floorplanning
-## Layer Info
+
+# I/O Layer info
 set ::env(FP_IO_HLAYER) "Metal3"
 set ::env(FP_IO_VLAYER) "Metal2"
-set ::env(FP_PDN_RAIL_LAYER) "Metal1"
-set ::env(FP_PDN_VERTICAL_LAYER) "Metal4"
-set ::env(FP_PDN_HORIZONTAL_LAYER) "Metal5"
+
+# PDN Macro blockages list
 set ::env(MACRO_BLOCKAGES_LAYER) "Metal1 Metal2 Metal3 Metal4 Metal5"
-set ::env(DATA_WIRE_RC_LAYER) "Metal2"
-set ::env(CLOCK_WIRE_RC_LAYER) "Metal4"
+
+# Don't set DATA_WIRE_RC_LAYER, CLOCK_WIRE_RC_LAYER
+# Have been renamed to SIGNAL_WIRE_RC_LAYERS, CLOCK_WIRE_RC_LAYERS
+# If unset, RT_MIN_LAYER and RT_MAX_LAYER are used for the calculation
+
+#set ::env(DATA_WIRE_RC_LAYER) "Metal2"
+#set ::env(CLOCK_WIRE_RC_LAYER) "Metal4"
 
 ## Tap Cell Dist
 set ::env(FP_TAPCELL_DIST) 20
 
-## Extra PDN configs
-
+# Extra PDN configs
+set ::env(FP_PDN_RAIL_LAYER) "Metal1"
 set ::env(FP_PDN_RAIL_OFFSET) 0
+
+set ::env(FP_PDN_VERTICAL_LAYER) "Metal4"
+set ::env(FP_PDN_HORIZONTAL_LAYER) "Metal5"
+
 set ::env(FP_PDN_VWIDTH) 1.6
 set ::env(FP_PDN_HWIDTH) 1.6
 set ::env(FP_PDN_VSPACING) 1.7
@@ -184,17 +194,16 @@ set ::env(KLAYOUT_DEF_LAYER_MAP) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/klayout
 ## Netgen
 set ::env(NETGEN_SETUP_FILE) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/netgen/$::env(PDK)_setup.tcl"
 
-# # Temporary Override(s) Because OpenROAD can't read techlefs properly
-# # Layer RC Values
-# set ::env(LAYERS_RC) "\
-#     Metal1 0.090000 0.0000394,\
-#     Metal2 0.090000 0.0000394,\
-#     Metal3 0.090000 0.0000394,\
-#     Metal4 0.090000 0.0000394,\
-#     Metal5 0.090000 0.0000394"
+# Used for parasitics estimation, IR drop analysis, etc
+set ::env(LAYERS_RC) [dict create]
 
-# set ::env(VIAS_RC) "\
-#     Via1 4.500,\
-#     Via2 4.500,\
-#     Via3 4.500,\
-#     Via4 4.500"
+# RC fit from OpenROAD
+# https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/blob/master/flow/platforms/gf180/setRC.tcl
+dict set ::env(LAYERS_RC) "*" Metal2 res 3.85861E-04
+dict set ::env(LAYERS_RC) "*" Metal2 cap 1.35357E-04
+dict set ::env(LAYERS_RC) "*" Metal3 res 2.06673E-04
+dict set ::env(LAYERS_RC) "*" Metal3 cap 1.46141E-04
+dict set ::env(LAYERS_RC) "*" Metal4 res 1.68609E-04
+dict set ::env(LAYERS_RC) "*" Metal4 cap 1.50688E-04
+dict set ::env(LAYERS_RC) "*" Metal5 res 7.92778E-05
+dict set ::env(LAYERS_RC) "*" Metal5 cap 1.55595E-04
