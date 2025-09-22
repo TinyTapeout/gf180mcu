@@ -269,6 +269,19 @@ def draw_sealring_edge(layout, h, metal_level, sealring_type="bonding"):
     https://gf180mcu-pdk.readthedocs.io/en/latest/physical_verification/design_manual/drm_12_2.html
     """
 
+    if metal_level == "Metal3":
+        max_metal = Layers.Metal3
+        max_via = Layers.Via2
+    elif metal_level == "Metal4":
+        max_metal = Layers.Metal4
+        max_via = Layers.Via3
+    elif metal_level == "Metal5":
+        max_metal = Layers.Metal5
+        max_via = Layers.Via4
+    elif metal_level == "MetalTop":
+        max_metal = Layers.MetalTop
+        max_via = Layers.Via5
+
     cell_index = layout.add_cell("sealring_edge")
     sealring_edge_cell = layout.cell(cell_index)
 
@@ -276,6 +289,9 @@ def draw_sealring_edge(layout, h, metal_level, sealring_type="bonding"):
     for cur_dict in solid_layers_table[sealring_type]:
         layer, start, end = cur_dict.values()
         sealring_edge_cell.shapes(layer).insert(pya.DBox.new(start, 0, end, h))
+        
+        if layer == max_metal:
+            break
 
     # Draw the contacts and vias
     for cur_dict in contact_vias_table:
@@ -297,11 +313,27 @@ def draw_sealring_edge(layout, h, metal_level, sealring_type="bonding"):
                     (h - i * stagger) / (distance2 + size),
                 )
             )
+        
+        if layer == max_via:
+            break
 
     return sealring_edge_cell
 
 
 def draw_sealring_corner(layout, metal_level, sealring_type="bonding"):
+
+    if metal_level == "Metal3":
+        max_metal = Layers.Metal3
+        max_via = Layers.Via2
+    elif metal_level == "Metal4":
+        max_metal = Layers.Metal4
+        max_via = Layers.Via3
+    elif metal_level == "Metal5":
+        max_metal = Layers.Metal5
+        max_via = Layers.Via4
+    elif metal_level == "MetalTop":
+        max_metal = Layers.MetalTop
+        max_via = Layers.Via5
 
     cell_index = layout.add_cell("sealring_corner")
     sealring_corner_cell = layout.cell(cell_index)
@@ -309,5 +341,8 @@ def draw_sealring_corner(layout, metal_level, sealring_type="bonding"):
     # Draw the polygon for each layer
     for layer, points in corner_polygons[sealring_type].items():
         sealring_corner_cell.shapes(layer).insert(pya.DPolygon(points))
+
+        if layer == max_metal:
+            break
 
     return sealring_corner_cell

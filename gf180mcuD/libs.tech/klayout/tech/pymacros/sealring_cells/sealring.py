@@ -32,11 +32,12 @@ class sealring(pya.PCellDeclarationHelper):
         super(sealring, self).__init__()
 
         self.metal_handle = self.param(
-            "metal_level", self.TypeList, "Metal level", default="Metal4"
+            "metal_level", self.TypeList, "Metal level", default="Metal5"
         )
+        self.metal_handle.add_choice("Metal3", "Metal3")
         self.metal_handle.add_choice("Metal4", "Metal4")
         self.metal_handle.add_choice("Metal5", "Metal5")
-        self.metal_handle.add_choice("Metal6", "Metal6")
+        self.metal_handle.add_choice("MetalTop", "MetalTop")
 
         self.type_handle = self.param(
             "sealring_type",
