@@ -338,8 +338,14 @@ foreach dev $devices {
 
 # Ensure that the specific MiM cap model and non-specific MiM cap model will
 # be matched if they differ in the two netlists.
-equate classes "-circuit1 cap_mim_2f0_m4m5_noshield" "-circuit2 cap_mim_2f0fF"
-equate classes "-circuit1 cap_mim_2f0fF" "-circuit2 cap_mim_2f0_m4m5_noshield"
+set dev1 cap_mim_2f0_m4m5_noshield
+set dev2 cap_mim_2f0fF
+if {[lsearch $cells1 $dev1] >= 0 && [lsearch $cells2 $dev2] >= 0} {
+    equate classes "-circuit1 $dev1" "-circuit2 $dev2"
+}
+if {[lsearch $cells1 $dev2] >= 0 && [lsearch $cells2 $dev1] >= 0} {
+    equate classes "-circuit1 $dev2" "-circuit2 $dev1"
+}
 
 #---------------------------------------------------------------
 # Digital cells (ignore decap, fill, and tap cells)

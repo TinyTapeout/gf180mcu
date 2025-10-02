@@ -15,7 +15,7 @@ tech
 end
 
 version
- version 1.0.536-1-g40cee97
+ version 1.0.549-1-g6971617
  description "Global Foundries 180mcu: open PDK rules and DRC"
  requires magic-8.3.411
 end
@@ -133,6 +133,7 @@ types
 
  -active filldiff
  -active fillpoly
+ -active fillfet
 
   metal1 metal1,m1,met1
   metal1 rmetal1,rm1,rmet1
@@ -447,6 +448,7 @@ styles
   obsactive implant4
   filldiff  ndiffusion
   fillpoly  polysilicon
+  fillfet   ntransistor
 
   padl      metal5 via5 overglass
 
@@ -469,6 +471,8 @@ compose
   compose  mvpfet  poly  mvpdiff
   compose  mvnvar  poly  mvnsd
   compose  mvpvar  poly  mvpsd
+
+  compose  fillfet fillpoly filldiff
   
   paint  mimcap  m4     mimcap
   paint  mimcapc m4     mimcapc
@@ -598,8 +602,8 @@ style gdsii
  	labels 	alldiff,schottky
  	calma 	22 0
 
- layer DIFFFILL	filldiff
-	labels	filldiff
+ layer DIFFFILL	filldiff,fillfet
+	labels	filldiff,fillfet
 	calma	22 4
 
 #-----------------------------------------------------
@@ -788,8 +792,8 @@ style gdsii
 	labels  allpoly port
 	calma	30 10
 
- layer POLYFILL	fillpoly
-	labels	fillpoly
+ layer POLYFILL	fillpoly,fillfet
+	labels	fillpoly,fillfet
 	calma	30 4
 
  layer PLFUSE	efuse
@@ -2612,10 +2616,8 @@ drc
 
  spacing allactiveres allactive 440 touching_ok \
 	"Diffusion resistor spacing to unrelated diffusion < %d (NDRES.3)"
-
-# Not part of the open PDK docs, disabled for now
-# spacing allactiveres allpoly 440 touching_ok \
-#	"Diffusion resistor spacing to unrelated poly < %d (NDRES.4)"
+ spacing allactiveres allpoly 430 touching_ok \
+	"Diffusion resistor spacing to unrelated poly < %d (NDRES.4)"
 
 #-----------------------------
 # CONT
