@@ -140,13 +140,6 @@ set ::env(FP_IO_VLAYER) "Metal2"
 # PDN Macro blockages list
 set ::env(MACRO_BLOCKAGES_LAYER) "Metal1 Metal2 Metal3 Metal4 Metal5"
 
-# Don't set DATA_WIRE_RC_LAYER, CLOCK_WIRE_RC_LAYER
-# Have been renamed to SIGNAL_WIRE_RC_LAYERS, CLOCK_WIRE_RC_LAYERS
-# If unset, RT_MIN_LAYER and RT_MAX_LAYER are used for the calculation
-
-#set ::env(DATA_WIRE_RC_LAYER) "Metal2"
-#set ::env(CLOCK_WIRE_RC_LAYER) "Metal4"
-
 ## Tap Cell Dist
 set ::env(FP_TAPCELL_DIST) 20
 
@@ -216,3 +209,20 @@ dict set ::env(LAYERS_RC) "*" Metal4 res 1.68609E-04
 dict set ::env(LAYERS_RC) "*" Metal4 cap 1.50688E-04
 dict set ::env(LAYERS_RC) "*" Metal5 res 7.92778E-05
 dict set ::env(LAYERS_RC) "*" Metal5 cap 1.55595E-04
+
+# Worst case
+set ::env(VIAS_RC) [dict create]
+dict set ::env(VIAS_RC) "*" Via1 16.845
+dict set ::env(VIAS_RC) "*" Via2 16.845
+dict set ::env(VIAS_RC) "*" Via3 16.845
+dict set ::env(VIAS_RC) "*" Via4 16.845
+
+# Best case
+#set ::env(VIAS_RC) [dict create]
+#dict set ::env(VIAS_RC) "*" Via1 4.23
+#dict set ::env(VIAS_RC) "*" Via2 4.23
+#dict set ::env(VIAS_RC) "*" Via3 4.23
+#dict set ::env(VIAS_RC) "*" Via4 4.23
+
+set ::env(SIGNAL_WIRE_RC_LAYERS) "Metal2"
+set ::env(CLOCK_WIRE_RC_LAYERS) "Metal4"
