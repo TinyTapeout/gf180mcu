@@ -167,12 +167,12 @@ else
 end
 
 # METAL_TOP
-METAL_TOP = $metal_top || '9K'
+METAL_TOP = $metal_top || '11K'
 
 logger.info("METAL_TOP Selected is #{METAL_TOP}")
 
 # METAL_LEVEL
-METAL_LEVEL = $metal_level || '6LM'
+METAL_LEVEL = $metal_level || '5LM'
 
 logger.info("METAL_STACK Selected is #{METAL_LEVEL}")
 
