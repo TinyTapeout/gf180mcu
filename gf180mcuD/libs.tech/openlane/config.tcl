@@ -13,9 +13,6 @@ set ::env(STD_CELL_GROUND_PINS) "VSS VPW"
 if { ![info exist ::env(STD_CELL_LIBRARY)] } {
     set ::env(STD_CELL_LIBRARY) gf180mcu_fd_sc_mcu7t5v0
 }
-if { ![info exist ::env(STD_CELL_LIBRARY_OPT)] } {
-    set ::env(STD_CELL_LIBRARY_OPT) gf180mcu_fd_sc_mcu7t5v0
-}
 
 if { ![info exist ::env(IO_PAD_LIBRARY)] } {
     set ::env(IO_PAD_LIBRARY) gf180mcu_fd_io
@@ -120,13 +117,10 @@ set ::env(RIPPLE_CARRY_ADDER_MAP) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openla
 set ::env(CARRY_SELECT_ADDER_MAP) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/$::env(STD_CELL_LIBRARY)/csa_map.v"
 
 # Default No Synth List
-set ::env(NO_SYNTH_CELL_LIST) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/$::env(STD_CELL_LIBRARY)/no_synth.cells"
+set ::env(SYNTH_EXCLUDED_CELL_FILE) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/$::env(STD_CELL_LIBRARY)/synth_exclude.cells"
 
 # Default DRC Exclude List
-set ::env(DRC_EXCLUDE_CELL_LIST) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/$::env(STD_CELL_LIBRARY)/drc_exclude.cells"
-
-# DRC Exclude List for Optimization library
-set ::env(DRC_EXCLUDE_CELL_LIST_OPT) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/$::env(STD_CELL_LIBRARY_OPT)/drc_exclude.cells"
+set ::env(PNR_EXCLUDED_CELL_FILE) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/$::env(STD_CELL_LIBRARY)/pnr_exclude.cells"
 
 # Open-RCX Rules File
 set ::env(RCX_RULES) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/rcx_rules.info"
