@@ -108,7 +108,7 @@ for metal in do_layers
   tp.threads = $threads
   tp.tile_size(tile_size, tile_size)
   # Find optimal value?
-  tp.tile_border(tile_size + 30, tile_size + 30)
+  tp.tile_border(30, 30)
   
   tp.input("Metal", $ly, $top_cell.cell_index, metal_layers[metal])
   #tp.input("subsequent_metal", $ly, $top_cell.cell_index, subsequent_metals[metal])

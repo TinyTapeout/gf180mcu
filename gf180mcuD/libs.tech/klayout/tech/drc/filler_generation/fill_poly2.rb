@@ -46,7 +46,7 @@ tp.dbu = $ly.dbu
 tp.threads = $threads
 tp.tile_size(tile_size, tile_size)
 # Find optimal value?
-tp.tile_border(tile_size + 30, tile_size + 30)
+tp.tile_border(30, 30)
 
 tp.input("COMP", $ly, $top_cell.cell_index, COMP)
 tp.input("Poly2", $ly, $top_cell.cell_index, Poly2)
