@@ -98,7 +98,6 @@ tp.var("um1", 1 / $ly.dbu)
 tp.var("um2", 2 / $ly.dbu)
 tp.var("um20", 20 / $ly.dbu)
 tp.var("um10", 10 / $ly.dbu)
-tp.var("sqrt2", Math.sqrt(2))
 
 # DPF.19
 tp.var("space_to_PMNDMY", 8 / $ly.dbu)
@@ -112,7 +111,7 @@ tp.queue("
 # DPF.1a
 # Not sure about this one...
 # If we want to place Poly2 on top of COMP we should use the same COMP boundary
-var COMP_20um_spacing = COMP.sized(um10).sized(-um10);
+var COMP_20um_spacing = COMP.sized(um10, 3).sized(-um10, 3);
 
 # DPF.6abcd
 var Nwell_ring    = Nwell.sized(space_to_Nwell)       - Nwell.sized(-space_to_Nwell);
@@ -125,7 +124,7 @@ var Dualgate_ring = Dualgate.sized(space_to_Dualgate) - Dualgate.sized(-space_to
 var scribe_line_ring = _frame - _frame.sized(-space_to_scribe_line);
 
 var fill_region = _tile & _frame
-                  - COMP_20um_spacing.sized(space_to_COMP * sqrt2)
+                  - COMP_20um_spacing.sized(space_to_COMP)
                   - Poly2.sized(space_to_Poly2)
                   - Nwell_ring
                   - DNWELL_ring
