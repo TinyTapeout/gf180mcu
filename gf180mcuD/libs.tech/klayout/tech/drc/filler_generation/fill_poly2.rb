@@ -108,10 +108,8 @@ tp.output("to_fill", TilingOperator::new($ly, $top_cell, fill_cell.cell_index, f
 # (see https://www.klayout.de/doc-qt4/about/expressions.html)
 tp.queue("
 
-# DPF.1a
-# Not sure about this one...
-# If we want to place Poly2 on top of COMP we should use the same COMP boundary
-var COMP_20um_spacing = COMP.sized(um10, 3).sized(-um10, 3);
+# DPF.1a - use octagon_limit for sizing, do multiple steps for better performance
+var COMP_20um_spacing = COMP.sized(um10, 0, mode=2).sized(0, um10, mode=2).sized(-um10, 0, mode=2).sized(0, -um10, mode=2);
 
 # DPF.6abcd
 var Nwell_ring    = Nwell.sized(space_to_Nwell)       - Nwell.sized(-space_to_Nwell);

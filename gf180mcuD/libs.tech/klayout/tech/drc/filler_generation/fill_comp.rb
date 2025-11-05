@@ -100,8 +100,8 @@ tp.output("to_fill", TilingOperator::new($ly, $top_cell, fill_cell.cell_index, f
 # (see https://www.klayout.de/doc-qt4/about/expressions.html)
 tp.queue("
 
-# DCF.1a
-var COMP_20um_spacing = COMP.sized(um10, 3).sized(-um10, 3);
+# DCF.1a - use octagon_limit for sizing, do multiple steps for better performance
+var COMP_20um_spacing = COMP.sized(um10, 0, mode=2).sized(0, um10, mode=2).sized(-um10, 0, mode=2).sized(0, -um10, mode=2);
 
 # DCF.6abcd
 var Nwell_ring    = Nwell.sized(space_to_Nwell)       - Nwell.sized(-space_to_Nwell);
