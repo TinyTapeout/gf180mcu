@@ -4,7 +4,7 @@ tech
 end
 
 version
-    version 1.0.536-1-g40cee97
+    version 1.0.552-1-g9608f38
     description "Global Foundries GF018MCU: Vendor GDS layers"
 end
 

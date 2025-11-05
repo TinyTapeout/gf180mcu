@@ -6,7 +6,7 @@
 #-----------------------------------------------------
 
 if {[catch {set TECHPATH $env(PDK_ROOT)}]} {
-    set TECHPATH /Users/runner/work/open_pdks/open_pdks/root/ciel/gf180mcu/build/40cee970d8a9b7eaea35a34fe7d6068f05721f0a
+    set TECHPATH /Users/runner/work/open_pdks/open_pdks/root/ciel/gf180mcu/build/9608f38a18c41de49402a7b91daaed6b69317398
 }
 if [catch {set PDKPATH}] {set PDKPATH ${TECHPATH}/gf180mcuD}
 set PDKNAME gf180mcuD
