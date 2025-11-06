@@ -7,3 +7,4 @@ feol: true
 beol: true
 offgrid: 'true'
 connectivity: 'false'
+dummy: 'true'

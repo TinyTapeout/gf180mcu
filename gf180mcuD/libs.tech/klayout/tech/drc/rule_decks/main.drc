@@ -173,6 +173,11 @@ BEOL = bool_check?($beol)
 
 logger.info("BEOL enabled: #{BEOL}")
 
+# DUMMY
+DUMMY = bool_check?($dummy)
+
+logger.info("DUMMY enabled: #{DUMMY}")
+
 ## SLOW_VIA
 SLOW_VIA = bool_check?($slow_via)
 
