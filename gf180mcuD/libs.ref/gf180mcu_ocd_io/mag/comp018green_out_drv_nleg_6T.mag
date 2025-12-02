@@ -1,0 +1,46 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1764353313
+<< hvnmos >>
+rect 206 132 366 7532
+rect 2010 132 2170 7532
+<< mvndiff >>
+rect 48 7474 150 7532
+rect 48 190 61 7474
+rect 107 190 150 7474
+rect 48 132 150 190
+rect 1122 7474 1254 7532
+rect 1122 190 1165 7474
+rect 1211 190 1254 7474
+rect 1122 132 1254 190
+rect 2226 7474 2328 7532
+rect 2226 190 2269 7474
+rect 2315 190 2328 7474
+rect 2226 132 2328 190
+<< mvndiffc >>
+rect 61 190 107 7474
+rect 1165 190 1211 7474
+rect 2269 190 2315 7474
+<< polysilicon >>
+rect 206 7532 366 7632
+rect 2010 7532 2170 7632
+rect 206 42 366 132
+rect 2010 42 2170 132
+<< mvndiffres >>
+rect 150 132 206 7532
+rect 366 132 1122 7532
+rect 1254 132 2010 7532
+rect 2170 132 2226 7532
+<< metal1 >>
+rect 61 7474 107 7532
+rect 61 132 107 190
+rect 1165 7474 1211 7532
+rect 1165 132 1211 190
+rect 2269 7474 2315 7532
+rect 2269 132 2315 190
+<< properties >>
+string GDS_END 10823198
+string GDS_FILE $PDKPATH/libs.ref/gf180mcu_ocd_io/gds/gf180mcu_ocd_io.gds
+string GDS_START 10807130
+<< end >>
