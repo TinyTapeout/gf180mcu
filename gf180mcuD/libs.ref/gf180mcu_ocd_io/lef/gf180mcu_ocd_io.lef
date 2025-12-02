@@ -1,0 +1,4046 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_ocd_io__asig_5p0
+  CLASS PAD INOUT ;
+  FOREIGN gf180mcu_ocd_io__asig_5p0 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 75.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN ASIG5V
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 1200.000000 ;
+    PORT
+      LAYER Metal5 ;
+        RECT 7.500 2.000 67.500 62.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 15.340 134.370 17.880 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 21.020 134.370 23.560 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 26.700 134.370 29.240 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 32.380 134.370 34.920 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 40.080 134.370 42.620 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 45.760 134.370 48.300 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 51.440 134.370 53.980 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 57.120 134.370 59.660 350.000 ;
+    END
+  END ASIG5V
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 334.000 5.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 294.000 5.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 278.000 5.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 270.000 5.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 262.000 5.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 214.000 5.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 206.000 5.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 182.000 5.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 166.000 5.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 150.000 5.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 134.000 5.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 118.000 5.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 334.000 75.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 294.000 75.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 278.000 75.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 270.000 75.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 262.000 75.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 214.000 75.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 206.000 75.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 182.000 75.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 166.000 75.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 150.000 75.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 134.000 75.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 118.000 75.000 125.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 86.000 5.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 326.000 5.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 342.000 5.000 348.390 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 230.000 5.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 286.000 5.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 302.000 5.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 198.000 5.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 102.000 5.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 5.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 70.000 5.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 86.000 75.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 326.000 75.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 342.000 75.000 348.390 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 230.000 75.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 286.000 75.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 302.000 75.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 198.000 75.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 102.000 75.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 126.000 75.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 70.000 75.000 85.000 ;
+    END
+  END DVSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 310.000 5.000 317.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 254.000 5.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 310.000 75.000 317.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 254.000 75.000 261.000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 5.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 5.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 318.000 75.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 246.000 75.000 253.000 ;
+    END
+  END VSS
+  OBS
+      LAYER Nwell ;
+        RECT 3.790 70.755 71.210 344.755 ;
+      LAYER Metal1 ;
+        RECT -0.160 65.540 75.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 134.070 15.040 348.390 ;
+        RECT 18.180 134.070 20.720 348.390 ;
+        RECT 23.860 134.070 26.400 348.390 ;
+        RECT 29.540 134.070 32.080 348.390 ;
+        RECT 35.220 134.070 39.780 348.390 ;
+        RECT 42.920 134.070 45.460 348.390 ;
+        RECT 48.600 134.070 51.140 348.390 ;
+        RECT 54.280 134.070 56.820 348.390 ;
+        RECT 59.960 134.070 75.000 348.390 ;
+        RECT 0.000 0.000 75.000 134.070 ;
+      LAYER Metal3 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal4 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal5 ;
+        RECT 5.600 69.400 69.400 348.390 ;
+        RECT 3.500 62.600 71.500 69.400 ;
+        RECT 3.500 1.400 6.900 62.600 ;
+        RECT 68.100 1.400 71.500 62.600 ;
+        RECT 3.500 0.000 71.500 1.400 ;
+  END
+END gf180mcu_ocd_io__asig_5p0
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__bi_24t
+  CLASS PAD INOUT ;
+  FOREIGN gf180mcu_ocd_io__bi_24t ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 75.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 69.400 266.830 69.780 349.760 ;
+    END
+  END A
+  PIN CS
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 3.360 328.305 3.740 349.760 ;
+    END
+  END CS
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 118.000 5.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 134.000 5.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 150.000 5.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 166.000 5.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 182.000 5.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 206.000 5.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 214.000 5.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 262.000 5.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 270.000 5.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 278.000 5.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 294.000 5.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 334.000 5.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 118.000 75.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 134.000 75.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 150.000 75.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 166.000 75.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 182.000 75.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 206.000 75.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 214.000 75.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 270.000 75.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 278.000 75.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 294.000 75.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 334.000 75.000 341.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 70.000 5.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 86.000 5.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 102.000 5.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 5.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 198.000 5.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 230.000 5.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 286.000 5.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 302.000 5.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 326.000 5.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 342.000 5.000 348.390 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 70.000 75.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 86.000 75.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 102.000 75.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 126.000 75.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 198.000 75.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 230.000 75.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 286.000 75.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 302.000 75.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 326.000 75.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 342.000 75.000 348.390 ;
+    END
+  END DVSS
+  PIN IE
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 11.385 334.680 11.765 349.760 ;
+    END
+  END IE
+  PIN OE
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 2.016000 ;
+    ANTENNADIFFAREA 7.776000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 70.130 283.205 70.510 349.760 ;
+    END
+  END OE
+  PIN PAD
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 335.279999 ;
+    PORT
+      LAYER Metal5 ;
+        RECT 7.500 2.000 67.500 62.000 ;
+    END
+  END PAD
+  PIN PD
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.512000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 10.330 329.860 10.710 349.760 ;
+    END
+  END PD
+  PIN PU
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.008000 ;
+    ANTENNADIFFAREA 1.795000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.965 330.180 6.345 349.760 ;
+    END
+  END PU
+  PIN SL
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 68.670 266.100 69.050 349.760 ;
+    END
+  END SL
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 254.000 5.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 310.000 5.000 317.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 310.000 75.000 317.000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 5.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 5.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 246.000 75.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 318.000 75.000 325.000 ;
+    END
+  END VSS
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 3.240000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 70.860 319.660 71.240 349.760 ;
+    END
+  END Y
+  OBS
+      LAYER Nwell ;
+        RECT 1.805 67.400 73.195 346.295 ;
+      LAYER Metal1 ;
+        RECT -0.160 65.450 75.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 328.005 3.060 348.135 ;
+        RECT 4.040 329.880 5.665 348.135 ;
+        RECT 6.645 329.880 10.030 348.135 ;
+        RECT 4.040 329.560 10.030 329.880 ;
+        RECT 11.010 334.380 11.085 348.135 ;
+        RECT 12.065 334.380 68.370 348.135 ;
+        RECT 11.010 329.560 68.370 334.380 ;
+        RECT 4.040 328.005 68.370 329.560 ;
+        RECT 0.000 265.800 68.370 328.005 ;
+        RECT 71.540 319.360 75.000 348.135 ;
+        RECT 70.810 282.905 75.000 319.360 ;
+        RECT 70.080 266.530 75.000 282.905 ;
+        RECT 69.350 265.800 75.000 266.530 ;
+        RECT 0.000 0.000 75.000 265.800 ;
+      LAYER Metal3 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal4 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal5 ;
+        RECT 5.600 269.400 69.400 348.390 ;
+        RECT 5.600 253.600 75.000 269.400 ;
+        RECT 5.600 69.400 69.400 253.600 ;
+        RECT 3.500 62.600 75.000 69.400 ;
+        RECT 3.500 1.400 6.900 62.600 ;
+        RECT 68.100 1.400 75.000 62.600 ;
+        RECT 3.500 0.000 75.000 1.400 ;
+  END
+END gf180mcu_ocd_io__bi_24t
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__bi_a
+  CLASS PAD INOUT ;
+  FOREIGN gf180mcu_ocd_io__bi_a ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 75.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 69.400 267.070 69.780 350.000 ;
+    END
+  END A
+  PIN CS
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 3.360 328.545 3.740 350.000 ;
+    END
+  END CS
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 182.000 5.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 214.000 5.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 334.000 5.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 294.000 5.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 278.000 5.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 270.000 5.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 262.000 5.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 206.000 5.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 118.000 5.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 134.000 5.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 150.000 5.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 166.000 5.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 182.000 75.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 214.000 75.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 334.000 75.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 294.000 75.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 278.000 75.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 270.000 75.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 262.000 75.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 206.000 75.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 118.000 75.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 134.000 75.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 150.000 75.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 166.000 75.000 181.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 86.000 5.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 70.000 5.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 230.000 5.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 198.000 5.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 102.000 5.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 5.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 286.000 5.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 302.000 5.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 326.000 5.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 342.000 5.000 348.390 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 86.000 75.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 70.000 75.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 230.000 75.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 198.000 75.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 102.000 75.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 126.000 75.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 286.000 75.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 302.000 75.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 326.000 75.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 342.000 75.000 348.390 ;
+    END
+  END DVSS
+  PIN IE
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 11.385 334.920 11.765 350.000 ;
+    END
+  END IE
+  PIN OE
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 2.016000 ;
+    ANTENNADIFFAREA 7.776000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 70.130 283.445 70.510 350.000 ;
+    END
+  END OE
+  PIN PAD
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 258.720001 ;
+    PORT
+      LAYER Metal5 ;
+        RECT 7.500 2.000 67.500 62.000 ;
+    END
+  END PAD
+  PIN PD
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.512000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 10.330 330.100 10.710 350.000 ;
+    END
+  END PD
+  PIN PDRV0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 2.592000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 7.110 326.870 7.490 350.000 ;
+    END
+  END PDRV0
+  PIN PDRV1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 2.592000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 7.820 326.280 8.200 350.005 ;
+    END
+  END PDRV1
+  PIN PU
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.008000 ;
+    ANTENNADIFFAREA 1.795000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.965 330.420 6.345 350.000 ;
+    END
+  END PU
+  PIN SL
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 68.670 266.340 69.050 350.000 ;
+    END
+  END SL
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 254.000 5.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 310.000 5.000 317.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 254.000 75.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 310.000 75.000 317.000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 5.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 5.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 318.000 75.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 246.000 75.000 253.000 ;
+    END
+  END VSS
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 3.240000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 70.860 319.900 71.240 350.000 ;
+    END
+  END Y
+  PIN ANA
+    ANTENNAGATEAREA 21.490000 ;
+    ANTENNADIFFAREA 80.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 8.530 321.790 8.910 350.005 ;
+    END
+  END ANA
+  OBS
+      LAYER Nwell ;
+        RECT 1.805 68.895 73.195 346.535 ;
+      LAYER Metal1 ;
+        RECT -0.160 65.540 75.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 328.245 3.060 348.375 ;
+        RECT 4.040 330.120 5.665 348.375 ;
+        RECT 6.645 330.120 6.810 348.375 ;
+        RECT 4.040 328.245 6.810 330.120 ;
+        RECT 0.000 326.570 6.810 328.245 ;
+        RECT 9.210 329.800 10.030 348.375 ;
+        RECT 11.010 334.620 11.085 348.375 ;
+        RECT 12.065 334.620 68.370 348.375 ;
+        RECT 11.010 329.800 68.370 334.620 ;
+        RECT 0.000 325.980 7.520 326.570 ;
+        RECT 0.000 321.490 8.230 325.980 ;
+        RECT 9.210 321.490 68.370 329.800 ;
+        RECT 0.000 266.040 68.370 321.490 ;
+        RECT 71.540 319.600 75.000 348.375 ;
+        RECT 70.810 283.145 75.000 319.600 ;
+        RECT 70.080 266.770 75.000 283.145 ;
+        RECT 69.350 266.040 75.000 266.770 ;
+        RECT 0.000 0.000 75.000 266.040 ;
+      LAYER Metal3 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal4 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal5 ;
+        RECT 5.600 69.400 69.400 348.390 ;
+        RECT 3.500 62.600 71.500 69.400 ;
+        RECT 3.500 1.400 6.900 62.600 ;
+        RECT 68.100 1.400 71.500 62.600 ;
+        RECT 3.500 0.000 71.500 1.400 ;
+  END
+END gf180mcu_ocd_io__bi_a
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__bi_t
+  CLASS PAD INOUT ;
+  FOREIGN gf180mcu_ocd_io__bi_t ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 75.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 69.400 267.070 69.780 350.000 ;
+    END
+  END A
+  PIN CS
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 3.360 328.545 3.740 350.000 ;
+    END
+  END CS
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 182.000 5.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 214.000 5.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 334.000 5.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 294.000 5.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 278.000 5.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 270.000 5.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 262.000 5.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 206.000 5.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 118.000 5.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 134.000 5.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 150.000 5.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 166.000 5.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 182.000 75.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 214.000 75.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 334.000 75.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 294.000 75.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 278.000 75.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 270.000 75.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 262.000 75.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 206.000 75.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 118.000 75.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 134.000 75.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 150.000 75.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 166.000 75.000 181.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 86.000 5.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 70.000 5.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 230.000 5.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 198.000 5.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 102.000 5.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 5.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 286.000 5.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 302.000 5.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 326.000 5.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 342.000 5.000 348.390 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 86.000 75.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 70.000 75.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 230.000 75.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 198.000 75.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 102.000 75.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 126.000 75.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 286.000 75.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 302.000 75.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 326.000 75.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 342.000 75.000 348.390 ;
+    END
+  END DVSS
+  PIN IE
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 11.385 334.920 11.765 350.000 ;
+    END
+  END IE
+  PIN OE
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 2.016000 ;
+    ANTENNADIFFAREA 7.776000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 70.130 283.445 70.510 350.000 ;
+    END
+  END OE
+  PIN PAD
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 258.720001 ;
+    PORT
+      LAYER Metal5 ;
+        RECT 7.500 2.000 67.500 62.000 ;
+    END
+  END PAD
+  PIN PD
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.512000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 10.330 330.100 10.710 350.000 ;
+    END
+  END PD
+  PIN PDRV0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 2.592000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 7.110 326.870 7.490 350.000 ;
+    END
+  END PDRV0
+  PIN PDRV1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 2.592000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 7.820 326.280 8.200 350.005 ;
+    END
+  END PDRV1
+  PIN PU
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.008000 ;
+    ANTENNADIFFAREA 1.795000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.965 330.420 6.345 350.000 ;
+    END
+  END PU
+  PIN SL
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.504000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 68.670 266.340 69.050 350.000 ;
+    END
+  END SL
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 254.000 5.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 310.000 5.000 317.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 254.000 75.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 310.000 75.000 317.000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 5.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 5.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 318.000 75.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 246.000 75.000 253.000 ;
+    END
+  END VSS
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 3.240000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 70.860 319.900 71.240 350.000 ;
+    END
+  END Y
+  OBS
+      LAYER Nwell ;
+        RECT 1.805 68.895 73.195 346.535 ;
+      LAYER Metal1 ;
+        RECT -0.160 65.540 75.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 328.245 3.060 348.375 ;
+        RECT 4.040 330.120 5.665 348.375 ;
+        RECT 6.645 330.120 6.810 348.375 ;
+        RECT 4.040 328.245 6.810 330.120 ;
+        RECT 0.000 326.570 6.810 328.245 ;
+        RECT 8.500 329.800 10.030 348.375 ;
+        RECT 11.010 334.620 11.085 348.375 ;
+        RECT 12.065 334.620 68.370 348.375 ;
+        RECT 11.010 329.800 68.370 334.620 ;
+        RECT 0.000 325.980 7.520 326.570 ;
+        RECT 8.500 325.980 68.370 329.800 ;
+        RECT 0.000 266.040 68.370 325.980 ;
+        RECT 71.540 319.600 75.000 348.375 ;
+        RECT 70.810 283.145 75.000 319.600 ;
+        RECT 70.080 266.770 75.000 283.145 ;
+        RECT 69.350 266.040 75.000 266.770 ;
+        RECT 0.000 0.000 75.000 266.040 ;
+      LAYER Metal3 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal4 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal5 ;
+        RECT 5.600 69.400 69.400 348.390 ;
+        RECT 3.500 62.600 71.500 69.400 ;
+        RECT 3.500 1.400 6.900 62.600 ;
+        RECT 68.100 1.400 71.500 62.600 ;
+        RECT 3.500 0.000 71.500 1.400 ;
+  END
+END gf180mcu_ocd_io__bi_t
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__brk2
+  CLASS PAD SPACER ;
+  FOREIGN gf180mcu_ocd_io__brk2 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 2.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 2.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 2.000 253.000 ;
+    END
+  END VSS
+  OBS
+      LAYER Metal1 ;
+        RECT -0.160 65.540 2.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 66.375 2.000 348.845 ;
+      LAYER Metal3 ;
+        RECT 0.000 246.000 2.000 325.000 ;
+      LAYER Metal4 ;
+        RECT 0.000 246.000 2.000 325.000 ;
+  END
+END gf180mcu_ocd_io__brk2
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__brk5
+  CLASS PAD SPACER ;
+  FOREIGN gf180mcu_ocd_io__brk5 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 5.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 5.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 5.000 253.000 ;
+    END
+  END VSS
+  OBS
+      LAYER Metal1 ;
+        RECT -0.160 65.540 5.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 68.110 5.000 348.080 ;
+      LAYER Metal3 ;
+        RECT 0.000 246.000 5.000 325.000 ;
+      LAYER Metal4 ;
+        RECT 0.000 246.000 5.000 325.000 ;
+  END
+END gf180mcu_ocd_io__brk5
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__cor
+  CLASS PAD SPACER ;
+  FOREIGN gf180mcu_ocd_io__cor ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 355.000 BY 355.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 166.000 355.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 150.000 355.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 134.000 355.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 118.000 355.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 206.000 355.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 182.000 355.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 182.000 350.000 197.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 166.000 350.000 181.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 150.000 350.000 165.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 134.000 350.000 149.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 118.000 350.000 125.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 206.000 350.000 213.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 294.000 350.000 301.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 278.000 350.000 285.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 270.000 350.000 277.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 262.000 350.000 269.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 214.000 350.000 229.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 334.000 355.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 294.000 355.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 278.000 355.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 270.000 355.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 262.000 355.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 214.000 355.000 228.995 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 334.000 350.000 341.000 355.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 198.000 355.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 126.000 355.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 102.000 355.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 70.000 355.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 86.000 355.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 126.000 350.000 133.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 102.000 350.000 117.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 86.000 350.000 101.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 350.000 85.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 198.000 350.000 205.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 326.000 350.000 333.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 302.000 350.000 309.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 286.000 350.000 293.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 230.000 350.000 245.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 342.000 355.000 348.390 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 326.000 355.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 302.000 355.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 286.000 355.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 230.000 355.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 342.000 350.000 348.390 355.000 ;
+    END
+  END DVSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 310.000 350.000 317.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 254.000 350.000 261.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 310.000 355.000 317.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 254.000 355.000 261.000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 318.000 350.000 325.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 246.000 350.000 253.000 355.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 246.000 355.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 350.000 318.000 355.000 325.000 ;
+    END
+  END VSS
+  OBS
+      LAYER Nwell ;
+        RECT 67.560 67.500 350.445 352.170 ;
+      LAYER Metal1 ;
+        RECT 65.540 65.540 355.000 355.000 ;
+      LAYER Metal2 ;
+        RECT 68.030 67.970 354.505 354.450 ;
+      LAYER Metal3 ;
+        RECT 70.000 70.000 355.000 355.000 ;
+      LAYER Metal4 ;
+        RECT 70.000 70.000 355.000 355.000 ;
+      LAYER Metal5 ;
+        RECT 348.990 349.400 350.000 350.000 ;
+        RECT 70.000 348.990 350.000 349.400 ;
+        RECT 70.000 70.000 349.400 348.990 ;
+  END
+END gf180mcu_ocd_io__cor
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__dvdd
+  CLASS PAD POWER ;
+  FOREIGN gf180mcu_ocd_io__dvdd ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 75.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 334.000 5.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 294.000 5.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 278.000 5.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 270.000 5.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 262.000 5.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 206.000 5.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 214.000 5.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 182.000 5.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 166.000 5.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 150.000 5.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 134.000 5.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 118.000 5.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 7.500 2.000 67.500 62.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 1.360 345.345 10.860 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 13.760 345.345 24.010 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 25.610 345.345 35.860 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 39.140 345.345 49.390 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 50.990 345.345 61.240 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 64.140 345.345 73.640 350.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 334.000 75.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 294.000 75.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 278.000 75.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 270.000 75.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 262.000 75.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 206.000 75.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 214.000 75.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 182.000 75.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 166.000 75.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 150.000 75.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 134.000 75.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 118.000 75.000 125.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 86.000 5.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 70.000 5.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 230.000 5.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 198.000 5.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 5.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 102.000 5.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 286.000 5.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 302.000 5.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 326.000 5.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 342.000 5.000 348.390 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 86.000 75.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 70.000 75.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 230.000 75.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 198.000 75.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 126.000 75.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 102.000 75.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 286.000 75.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 302.000 75.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 326.000 75.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 342.000 75.000 348.390 ;
+    END
+  END DVSS
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 5.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 5.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 246.000 75.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 318.000 75.000 325.000 ;
+    END
+  END VSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 310.000 5.000 317.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 254.000 5.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 310.000 75.000 317.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 254.000 75.000 261.000 ;
+    END
+  END VDD
+  OBS
+      LAYER Nwell ;
+        RECT 3.060 67.480 71.940 345.275 ;
+      LAYER Metal1 ;
+        RECT -0.160 65.540 75.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 345.045 1.060 348.390 ;
+        RECT 11.160 345.045 13.460 348.390 ;
+        RECT 24.310 345.045 25.310 348.390 ;
+        RECT 36.160 345.045 38.840 348.390 ;
+        RECT 49.690 345.045 50.690 348.390 ;
+        RECT 61.540 345.045 63.840 348.390 ;
+        RECT 73.940 345.045 75.000 348.390 ;
+        RECT 0.000 0.000 75.000 345.045 ;
+      LAYER Metal3 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal4 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal5 ;
+        RECT 5.600 69.400 69.400 348.390 ;
+        RECT 3.500 62.600 71.500 69.400 ;
+        RECT 3.500 1.400 6.900 62.600 ;
+        RECT 68.100 1.400 71.500 62.600 ;
+        RECT 3.500 0.000 71.500 1.400 ;
+  END
+END gf180mcu_ocd_io__dvdd
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__dvss
+  CLASS PAD POWER ;
+  FOREIGN gf180mcu_ocd_io__dvss ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 75.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 334.000 5.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 294.000 5.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 278.000 5.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 270.000 5.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 262.000 5.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 206.000 5.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 214.000 5.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 182.000 5.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 166.000 5.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 150.000 5.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 134.000 5.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 118.000 5.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 334.000 75.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 294.000 75.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 278.000 75.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 270.000 75.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 262.000 75.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 206.000 75.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 214.000 75.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 182.000 75.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 166.000 75.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 150.000 75.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 134.000 75.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 118.000 75.000 125.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 86.000 5.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 70.000 5.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 230.000 5.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 198.000 5.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 5.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 102.000 5.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 286.000 5.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 302.000 5.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 326.000 5.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 342.000 5.000 348.390 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 7.500 2.000 67.500 62.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 1.360 348.120 10.860 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 13.760 348.120 24.010 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 25.610 348.120 35.860 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 64.140 348.120 73.640 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 50.990 348.120 61.240 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 39.140 348.120 49.390 350.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 86.000 75.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 70.000 75.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 230.000 75.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 198.000 75.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 126.000 75.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 102.000 75.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 286.000 75.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 302.000 75.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 326.000 75.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 342.000 75.000 348.390 ;
+    END
+  END DVSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 254.000 5.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 310.000 5.000 317.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 254.000 75.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 310.000 75.000 317.000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 5.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 5.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 318.000 75.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 246.000 75.000 253.000 ;
+    END
+  END VSS
+  OBS
+      LAYER Nwell ;
+        RECT 3.060 67.195 71.940 345.275 ;
+      LAYER Metal1 ;
+        RECT -0.160 65.540 75.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 347.820 1.060 348.390 ;
+        RECT 11.160 347.820 13.460 348.390 ;
+        RECT 24.310 347.820 25.310 348.390 ;
+        RECT 36.160 347.820 38.840 348.390 ;
+        RECT 49.690 347.820 50.690 348.390 ;
+        RECT 61.540 347.820 63.840 348.390 ;
+        RECT 73.940 347.820 75.000 348.390 ;
+        RECT 0.000 0.000 75.000 347.820 ;
+      LAYER Metal3 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal4 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal5 ;
+        RECT 5.600 69.400 69.400 348.390 ;
+        RECT 3.500 62.600 71.500 69.400 ;
+        RECT 3.500 1.400 6.900 62.600 ;
+        RECT 68.100 1.400 71.500 62.600 ;
+        RECT 3.500 0.000 71.500 1.400 ;
+  END
+END gf180mcu_ocd_io__dvss
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__fill1
+  CLASS PAD SPACER ;
+  FOREIGN gf180mcu_ocd_io__fill1 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 1.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 150.000 1.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 134.000 1.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 294.000 1.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 278.000 1.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 270.000 1.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 262.000 1.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 214.000 1.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 206.000 1.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 182.000 1.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 166.000 1.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 334.000 1.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 118.000 1.000 125.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 86.000 1.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 70.000 1.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 102.000 1.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 1.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 198.000 1.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 230.000 1.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 286.000 1.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 302.000 1.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 326.000 1.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 342.000 1.000 348.390 ;
+    END
+  END DVSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 254.000 1.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 310.000 1.000 317.000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 1.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 1.000 253.000 ;
+    END
+  END VSS
+  OBS
+      LAYER Metal1 ;
+        RECT -0.160 65.485 1.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 246.000 1.000 325.000 ;
+      LAYER Metal3 ;
+        RECT 0.000 70.000 1.000 348.390 ;
+      LAYER Metal4 ;
+        RECT 0.000 70.000 1.000 348.390 ;
+  END
+END gf180mcu_ocd_io__fill1
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__fill5
+  CLASS PAD SPACER ;
+  FOREIGN gf180mcu_ocd_io__fill5 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 5.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 118.000 5.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 134.000 5.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 150.000 5.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 166.000 5.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 182.000 5.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 206.000 5.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 214.000 5.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 262.000 5.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 270.000 5.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 278.000 5.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 294.000 5.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 334.000 5.000 341.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 345.045 5.000 345.385 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 70.000 5.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 86.000 5.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 102.000 5.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 5.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 198.000 5.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 230.000 5.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 286.000 5.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 302.000 5.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 326.000 5.000 333.000 ;
+    END
+  END DVSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 254.000 5.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 310.000 5.000 317.000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 5.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 5.000 325.000 ;
+    END
+  END VSS
+  OBS
+      LAYER Nwell ;
+        RECT 1.355 69.100 3.735 346.060 ;
+      LAYER Metal1 ;
+        RECT -0.160 65.540 5.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 67.350 5.000 348.300 ;
+      LAYER Metal3 ;
+        RECT 0.000 70.000 5.000 348.390 ;
+      LAYER Metal4 ;
+        RECT 0.000 70.000 5.000 348.390 ;
+      LAYER Metal5 ;
+        RECT 0.000 345.985 5.000 348.390 ;
+        RECT 0.000 342.000 5.000 344.445 ;
+  END
+END gf180mcu_ocd_io__fill5
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__fill10
+  CLASS PAD SPACER ;
+  FOREIGN gf180mcu_ocd_io__fill10 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 10.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 150.000 10.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 134.000 10.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 118.000 10.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 294.000 10.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 278.000 10.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 270.000 10.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 262.000 10.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 214.000 10.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 206.000 10.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 182.000 10.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 166.000 10.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 334.000 10.000 341.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 86.000 10.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 70.000 10.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 102.000 10.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 10.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 198.000 10.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 230.000 10.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 286.000 10.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 302.000 10.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 326.000 10.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 342.000 10.000 348.390 ;
+    END
+  END DVSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 254.000 10.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 310.000 10.000 317.000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 10.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 10.000 253.000 ;
+    END
+  END VSS
+  OBS
+      LAYER Nwell ;
+        RECT 1.570 73.075 8.450 343.535 ;
+      LAYER Metal1 ;
+        RECT -0.160 65.540 10.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 68.055 10.000 348.100 ;
+      LAYER Metal3 ;
+        RECT 0.000 70.000 10.000 348.390 ;
+      LAYER Metal4 ;
+        RECT 0.000 70.000 10.000 348.390 ;
+  END
+END gf180mcu_ocd_io__fill10
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__fillnc
+  CLASS PAD SPACER ;
+  FOREIGN gf180mcu_ocd_io__fillnc ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 0.100 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 334.000 0.100 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 294.000 0.100 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 278.000 0.100 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 270.000 0.100 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 262.000 0.100 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 214.000 0.100 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 206.000 0.100 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 182.000 0.100 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 166.000 0.100 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 150.000 0.100 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 134.000 0.100 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 118.000 0.100 125.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 86.000 0.100 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 70.000 0.100 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 102.000 0.100 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 0.100 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 198.000 0.100 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 230.000 0.100 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 286.000 0.100 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 302.000 0.100 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 326.000 0.100 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 342.000 0.100 348.390 ;
+    END
+  END DVSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 254.000 0.100 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 310.000 0.100 317.000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 0.100 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 0.100 253.000 ;
+    END
+  END VSS
+  OBS
+      LAYER Metal1 ;
+        RECT -0.160 65.540 0.260 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 246.000 0.100 325.000 ;
+      LAYER Metal3 ;
+        RECT 0.000 70.000 0.100 348.390 ;
+      LAYER Metal4 ;
+        RECT 0.000 70.000 0.100 348.390 ;
+  END
+END gf180mcu_ocd_io__fillnc
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__in_c
+  CLASS PAD INPUT ;
+  FOREIGN gf180mcu_ocd_io__in_c ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 75.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 118.000 5.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 134.000 5.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 150.000 5.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 166.000 5.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 182.000 5.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 206.000 5.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 214.000 5.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 262.000 5.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 270.000 5.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 278.000 5.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 294.000 5.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 334.000 5.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 118.000 75.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 134.000 75.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 150.000 75.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 166.000 75.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 182.000 75.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 206.000 75.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 214.000 75.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 262.000 75.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 270.000 75.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 278.000 75.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 294.000 75.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 334.000 75.000 341.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 70.000 5.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 86.000 5.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 102.000 5.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 5.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 198.000 5.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 230.000 5.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 286.000 5.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 302.000 5.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 326.000 5.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 342.000 5.000 348.390 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 70.000 75.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 86.000 75.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 102.000 75.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 126.000 75.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 198.000 75.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 230.000 75.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 286.000 75.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 302.000 75.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 326.000 75.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 342.000 75.000 348.390 ;
+    END
+  END DVSS
+  PIN PAD
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 258.720001 ;
+    PORT
+      LAYER Metal5 ;
+        RECT 7.500 2.000 67.500 62.000 ;
+    END
+  END PAD
+  PIN PD
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.512000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 10.330 329.950 10.710 349.850 ;
+    END
+  END PD
+  PIN PU
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.008000 ;
+    ANTENNADIFFAREA 1.795000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.965 330.270 6.345 349.850 ;
+    END
+  END PU
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 254.000 5.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 310.000 5.000 317.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 254.000 75.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 310.000 75.000 317.000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 5.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 5.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 246.000 75.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 318.000 75.000 325.000 ;
+    END
+  END VSS
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 3.240000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 70.860 319.750 71.240 349.850 ;
+    END
+  END Y
+  OBS
+      LAYER Nwell ;
+        RECT 1.630 68.745 73.195 346.385 ;
+      LAYER Metal1 ;
+        RECT -0.160 65.540 75.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 329.970 5.665 348.650 ;
+        RECT 6.645 329.970 10.030 348.650 ;
+        RECT 0.000 329.650 10.030 329.970 ;
+        RECT 11.010 329.650 70.560 348.650 ;
+        RECT 0.000 319.450 70.560 329.650 ;
+        RECT 71.540 319.450 75.000 348.650 ;
+        RECT 0.000 0.000 75.000 319.450 ;
+      LAYER Metal3 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal4 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal5 ;
+        RECT 5.600 69.400 69.400 348.390 ;
+        RECT 3.500 62.600 71.500 69.400 ;
+        RECT 3.500 1.400 6.900 62.600 ;
+        RECT 68.100 1.400 71.500 62.600 ;
+        RECT 3.500 0.000 71.500 1.400 ;
+  END
+END gf180mcu_ocd_io__in_c
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__in_s
+  CLASS PAD INPUT ;
+  FOREIGN gf180mcu_ocd_io__in_s ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 75.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 182.000 5.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 214.000 5.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 334.000 5.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 294.000 5.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 278.000 5.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 270.000 5.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 262.000 5.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 206.000 5.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 118.000 5.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 134.000 5.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 150.000 5.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 166.000 5.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 182.000 75.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 214.000 75.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 334.000 75.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 294.000 75.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 278.000 75.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 270.000 75.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 262.000 75.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 206.000 75.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 118.000 75.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 134.000 75.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 150.000 75.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 166.000 75.000 181.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 86.000 5.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 70.000 5.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 230.000 5.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 198.000 5.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 102.000 5.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 5.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 286.000 5.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 302.000 5.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 326.000 5.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 342.000 5.000 348.390 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 86.000 75.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 70.000 75.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 230.000 75.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 198.000 75.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 102.000 75.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 126.000 75.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 286.000 75.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 302.000 75.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 326.000 75.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 342.000 75.000 348.390 ;
+    END
+  END DVSS
+  PIN PAD
+    ANTENNADIFFAREA 258.720001 ;
+    PORT
+      LAYER Metal5 ;
+        RECT 7.500 2.000 67.500 62.000 ;
+    END
+  END PAD
+  PIN PD
+    ANTENNAGATEAREA 1.512000 ;
+    ANTENNADIFFAREA 1.000000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 10.330 329.950 10.710 349.850 ;
+    END
+  END PD
+  PIN PU
+    ANTENNAGATEAREA 1.008000 ;
+    ANTENNADIFFAREA 1.795000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.965 330.270 6.345 349.850 ;
+    END
+  END PU
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 254.000 5.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 310.000 5.000 317.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 254.000 75.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 310.000 75.000 317.000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 5.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 5.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 318.000 75.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 246.000 75.000 253.000 ;
+    END
+  END VSS
+  PIN Y
+    ANTENNADIFFAREA 3.240000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 70.860 319.750 71.240 349.850 ;
+    END
+  END Y
+  OBS
+      LAYER Nwell ;
+        RECT 1.630 68.745 73.195 346.385 ;
+      LAYER Metal1 ;
+        RECT -0.160 65.540 75.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 329.970 5.665 348.650 ;
+        RECT 6.645 329.970 10.030 348.650 ;
+        RECT 0.000 329.650 10.030 329.970 ;
+        RECT 11.010 329.650 70.560 348.650 ;
+        RECT 0.000 319.450 70.560 329.650 ;
+        RECT 71.540 319.450 75.000 348.650 ;
+        RECT 0.000 0.000 75.000 319.450 ;
+      LAYER Metal3 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal4 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal5 ;
+        RECT 5.600 69.400 69.400 348.390 ;
+        RECT 3.500 62.600 71.500 69.400 ;
+        RECT 3.500 1.400 6.900 62.600 ;
+        RECT 68.100 1.400 71.500 62.600 ;
+        RECT 3.500 0.000 71.500 1.400 ;
+  END
+END gf180mcu_ocd_io__in_s
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__vdd
+  CLASS PAD POWER ;
+  FOREIGN gf180mcu_ocd_io__vdd ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 75.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 334.000 5.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 294.000 5.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 278.000 5.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 270.000 5.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 262.000 5.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 206.000 5.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 214.000 5.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 182.000 5.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 166.000 5.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 150.000 5.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 134.000 5.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 118.000 5.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 334.000 75.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 294.000 75.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 278.000 75.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 270.000 75.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 262.000 75.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 206.000 75.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 214.000 75.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 182.000 75.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 166.000 75.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 150.000 75.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 134.000 75.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 118.000 75.000 125.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 86.000 5.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 70.000 5.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 230.000 5.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 198.000 5.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 5.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 102.000 5.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 286.000 5.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 302.000 5.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 326.000 5.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 342.000 5.000 348.390 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 86.000 75.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 70.000 75.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 230.000 75.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 198.000 75.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 126.000 75.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 102.000 75.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 286.000 75.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 302.000 75.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 326.000 75.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 342.000 75.000 348.390 ;
+    END
+  END DVSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1.360 345.345 10.860 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 13.760 345.345 24.010 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 25.610 345.345 35.860 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 39.140 345.345 49.390 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 50.990 345.345 61.240 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 64.140 345.345 73.640 350.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 7.500 2.000 67.500 62.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 310.000 5.000 317.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 254.000 5.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 310.000 75.000 317.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 254.000 75.000 261.000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 5.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 5.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 246.000 75.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 318.000 75.000 325.000 ;
+    END
+  END VSS
+  OBS
+      LAYER Nwell ;
+        RECT 3.060 67.480 71.940 345.275 ;
+      LAYER Metal1 ;
+        RECT -0.160 65.540 75.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 345.045 1.060 348.390 ;
+        RECT 11.160 345.045 13.460 348.390 ;
+        RECT 24.310 345.045 25.310 348.390 ;
+        RECT 36.160 345.045 38.840 348.390 ;
+        RECT 49.690 345.045 50.690 348.390 ;
+        RECT 61.540 345.045 63.840 348.390 ;
+        RECT 73.940 345.045 75.000 348.390 ;
+        RECT 0.000 0.000 75.000 345.045 ;
+      LAYER Metal3 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal4 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal5 ;
+        RECT 5.600 69.400 69.400 348.390 ;
+        RECT 3.500 62.600 71.500 69.400 ;
+        RECT 3.500 1.400 6.900 62.600 ;
+        RECT 68.100 1.400 71.500 62.600 ;
+        RECT 3.500 0.000 71.500 1.400 ;
+  END
+END gf180mcu_ocd_io__vdd
+
+#--------EOF---------
+
+MACRO gf180mcu_ocd_io__vss
+  CLASS PAD POWER ;
+  FOREIGN gf180mcu_ocd_io__vss ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 75.000 BY 350.000 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN DVDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 334.000 5.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 294.000 5.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 278.000 5.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 270.000 5.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 262.000 5.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 206.000 5.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 214.000 5.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 182.000 5.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 166.000 5.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 150.000 5.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 134.000 5.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 118.000 5.000 125.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 334.000 75.000 341.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 294.000 75.000 301.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 278.000 75.000 285.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 270.000 75.000 277.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 262.000 75.000 269.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 206.000 75.000 213.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 214.000 75.000 229.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 182.000 75.000 197.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 166.000 75.000 181.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 150.000 75.000 165.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 134.000 75.000 149.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 118.000 75.000 125.000 ;
+    END
+  END DVDD
+  PIN DVSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 86.000 5.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 70.000 5.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 230.000 5.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 198.000 5.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 5.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 102.000 5.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 286.000 5.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 302.000 5.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 326.000 5.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 342.000 5.000 348.390 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 86.000 75.000 101.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 70.000 75.000 85.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 230.000 75.000 245.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 198.000 75.000 205.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 126.000 75.000 133.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 102.000 75.000 117.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 286.000 75.000 293.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 302.000 75.000 309.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 326.000 75.000 333.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 342.000 75.000 348.390 ;
+    END
+  END DVSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 254.000 5.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 310.000 5.000 317.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 254.000 75.000 261.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 310.000 75.000 317.000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1.360 347.520 10.860 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 13.760 347.520 24.010 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 25.610 347.520 35.860 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 39.140 347.520 49.390 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 50.990 347.520 61.240 350.000 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT 64.140 347.520 73.640 350.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 318.000 5.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 246.000 5.000 253.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 7.500 2.000 67.500 62.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 318.000 75.000 325.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 70.000 246.000 75.000 253.000 ;
+    END
+  END VSS
+  OBS
+      LAYER Nwell ;
+        RECT 3.060 67.195 71.940 345.275 ;
+      LAYER Metal1 ;
+        RECT -0.160 65.540 75.160 349.785 ;
+      LAYER Metal2 ;
+        RECT 0.000 347.220 1.060 348.390 ;
+        RECT 11.160 347.220 13.460 348.390 ;
+        RECT 24.310 347.220 25.310 348.390 ;
+        RECT 36.160 347.220 38.840 348.390 ;
+        RECT 49.690 347.220 50.690 348.390 ;
+        RECT 61.540 347.220 63.840 348.390 ;
+        RECT 73.940 347.220 75.000 348.390 ;
+        RECT 0.000 0.000 75.000 347.220 ;
+      LAYER Metal3 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal4 ;
+        RECT 0.000 0.000 75.000 348.390 ;
+      LAYER Metal5 ;
+        RECT 5.600 69.400 69.400 348.390 ;
+        RECT 3.500 62.600 71.500 69.400 ;
+        RECT 3.500 1.400 6.900 62.600 ;
+        RECT 68.100 1.400 71.500 62.600 ;
+        RECT 3.500 0.000 71.500 1.400 ;
+  END
+END gf180mcu_ocd_io__vss
+
+#--------EOF---------
+
+
+END LIBRARY

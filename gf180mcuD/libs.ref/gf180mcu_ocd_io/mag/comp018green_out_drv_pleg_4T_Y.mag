@@ -1,0 +1,13 @@
+magic
+tech gf180mcuD
+magscale 1 5
+timestamp 1764353313
+use pmos_6p0_esd_40  pmos_6p0_esd_40_0
+timestamp 1764353313
+transform 1 0 0 0 1 0
+box 0 6 598 4126
+<< properties >>
+string GDS_END 12687850
+string GDS_FILE $PDKPATH/libs.ref/gf180mcu_ocd_io/gds/gf180mcu_ocd_io.gds
+string GDS_START 12687772
+<< end >>
