@@ -6,7 +6,7 @@
 #-----------------------------------------------------
 
 if {[catch {set TECHPATH $env(PDK_ROOT)}]} {
-    set TECHPATH /Users/runner/work/open_pdks/open_pdks/root/ciel/gf180mcu/build/9608f38a18c41de49402a7b91daaed6b69317398
+    set TECHPATH /Users/runner/work/open_pdks/open_pdks/root/ciel/gf180mcu/build/8fa792c6f7db44c0873c619d62190496b89c0083
 }
 if [catch {set PDKPATH}] {set PDKPATH ${TECHPATH}/gf180mcuD}
 set PDKNAME gf180mcuD
@@ -4085,7 +4085,7 @@ proc gf180mcu::pfet_06v0_draw {parameters} {
 	    diff_poly_space	0.30 \
 	    diff_gate_space	0.30 \
 	    diff_spacing	0.36 \
-	    gate_type		mvpfet \
+	    gate_type		hvpfet \
 	    diff_type 		mvpdiff \
 	    diff_contact_type	mvpdc \
 	    plus_diff_type	mvnsd \
@@ -4132,7 +4132,7 @@ proc gf180mcu::nfet_06v0_draw {parameters} {
 	    diff_poly_space	0.30 \
 	    diff_gate_space	0.30 \
 	    diff_spacing	0.36 \
-	    gate_type		mvnfet \
+	    gate_type		hvnfet \
 	    diff_type 		mvndiff \
 	    diff_contact_type	mvndc \
 	    plus_diff_type	mvpsd \
@@ -4206,7 +4206,7 @@ proc gf180mcu::pfet_06v0_dss_draw {parameters} {
 	    diff_poly_space	0.30 \
 	    diff_gate_space	0.30 \
 	    diff_spacing	0.36 \
-	    gate_type		mvpfet \
+	    gate_type		hvpfet \
 	    diff_type 		mvpdiffres \
 	    diff_contact_type	mvpdc \
 	    plus_diff_type	mvnsd \
@@ -4230,7 +4230,7 @@ proc gf180mcu::nfet_06v0_dss_draw {parameters} {
 	    diff_poly_space	0.30 \
 	    diff_gate_space	0.30 \
 	    diff_spacing	0.36 \
-	    gate_type		mvnfet \
+	    gate_type		hvnfet \
 	    diff_type 		mvndiffres \
 	    diff_contact_type	mvndc \
 	    plus_diff_type	mvpsd \
