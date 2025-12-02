@@ -15,7 +15,7 @@ if { ![info exist ::env(STD_CELL_LIBRARY)] } {
 }
 
 if { ![info exist ::env(PAD_CELL_LIBRARY)] } {
-    set ::env(PAD_CELL_LIBRARY) gf180mcu_fd_io
+    set ::env(PAD_CELL_LIBRARY) gf180mcu_ocd_io
 }
 
 
@@ -68,13 +68,11 @@ set ::env(CELL_CDLS)	"$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBR
 set ::env(PAD_LEFS) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/lef/*.lef"]
 # Unfortunately, the foundry library must be read in before the ef or ws library (ghost cell)
 set ::env(PAD_GDS) "\
-    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/gds/gf180mcu_fd_io.gds\
-    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/gds/gf180mcu_ef_io.gds\
-    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/gds/gf180mcu_ws_io.gds\
+    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/gds/gf180mcu_ocd_io.gds\
 "
 set ::env(PAD_VERILOG_MODELS) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/verilog/*__blackbox.v"]
 set ::env(PAD_SPICE_MODELS) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/spice/*.spice"]
-set ::env(PAD_CDLS) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/cdl/$::env(PAD_CELL_LIBRARY).cdl"
+#set ::env(PAD_CDLS) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/cdl/$::env(PAD_CELL_LIBRARY).cdl"
 
 # Latch mapping
 set ::env(SYNTH_LATCH_MAP) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/librelane/$::env(STD_CELL_LIBRARY)/latch_map.v"
