@@ -43,7 +43,7 @@ if $BEOL
   gr2_l1 = poly2_dummy.separation(guard_ring_mk, 10.um)
   gr2_l1.output('GR.2', 'GR.2 : Min GUARD_RING_MK space to prime die COMP, NWELL, Poly2, Metal 1, 2, 3, 4, 5 and metal Top: 10')
   gr2_l1.forget
-  for metal in metals
+  metals.each do |metal_name, metal|
     gr2_l1 = metal.separation(guard_ring_mk, 10.um)
     gr2_l1.output('GR.2', 'GR.2 : Min GUARD_RING_MK space to prime die COMP, NWELL, Poly2, Metal 1, 2, 3, 4, 5 and metal Top: 10')
     gr2_l1.forget
@@ -57,7 +57,7 @@ if $BEOL
 
   # Rule GR.4: Minimum metal-n width (n= 1 to 6): 12
   logger.info('Executing rule GR.4')
-  for metal in metals
+  metals.each do |metal_name, metal|
     gr4_l1 = metal.not_outside(guard_ring_mk).width(12.um)
     gr4_l1.output('GR.4', 'GR.4 : Minimum metal-n width (n= 1 to 6): 12')
     gr4_l1.forget

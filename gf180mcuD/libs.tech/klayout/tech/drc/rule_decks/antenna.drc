@@ -104,7 +104,7 @@ else
 end
 
 # METAL_TOP
-METAL_TOP = $metal_top || '9K'
+METAL_TOP = $metal_top || '11K'
 
 logger.info("METAL_TOP Selected is #{METAL_TOP}")
 
