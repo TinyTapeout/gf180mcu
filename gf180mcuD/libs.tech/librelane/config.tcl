@@ -177,6 +177,7 @@ dict set ::env(KLAYOUT_DENSITY_OPTIONS) run_mode "tiling"
 
 set ::env(KLAYOUT_ANTENNA_RUNSET) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/klayout/tech/drc/rule_decks/antenna.drc"
 set ::env(KLAYOUT_ANTENNA_OPTIONS) [dict create]
+dict set ::env(KLAYOUT_ANTENNA_OPTIONS) run_mode "deep"
 
 set ::env(KLAYOUT_FILLER_SCRIPT) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/klayout/tech/drc/filler_generation/fill_all.rb"
 
