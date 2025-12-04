@@ -52,22 +52,24 @@ line_spaces = {
 }
 
 # DM.5 & DM.7
-#previous_metals = {
-#  "Metal1" => Poly2,
-#  "Metal2" => Metal1,
-#  "Metal3" => Metal2,
-#  "Metal4" => Metal3,
-#  "Metal5" => Metal4
-#}
+previous_metals = {
+  "Metal1" => Poly2,
+  "Metal2" => Metal1,
+  "Metal3" => Metal2,
+  "Metal4" => Metal3,
+  "Metal5" => Metal4
+}
+
+Empty_Layer = $ly.insert_layer(RBA::LayerInfo::new())
 
 # DM.4 & DM.6
-#subsequent_metals = {
-#  "Metal1" => Metal2,
-#  "Metal2" => Metal3,
-#  "Metal3" => Metal4,
-#  "Metal4" => Metal5,
-#  "Metal5" => nil
-#}
+subsequent_metals = {
+  "Metal1" => Metal2,
+  "Metal2" => Metal3,
+  "Metal3" => Metal4,
+  "Metal4" => Metal5,
+  "Metal5" => Empty_Layer
+}
 
 # DM.9
 fc_origins = {
@@ -111,8 +113,8 @@ for metal in do_layers
   tp.tile_border(30, 30)
   
   tp.input("Metal", $ly, $top_cell.cell_index, metal_layers[metal])
-  #tp.input("subsequent_metal", $ly, $top_cell.cell_index, subsequent_metals[metal])
-  #tp.input("previous_metal", $ly, $top_cell.cell_index, previous_metals[metal])
+  tp.input("subsequent_metal", $ly, $top_cell.cell_index, subsequent_metals[metal])
+  tp.input("previous_metal", $ly, $top_cell.cell_index, previous_metals[metal])
   tp.input("FuseTop", $ly, $top_cell.cell_index, FuseTop)
   tp.input("POLYFUSE", $ly, $top_cell.cell_index, POLYFUSE)
   tp.input("FUSEWINDOW_D", $ly, $top_cell.cell_index, FUSEWINDOW_D)
@@ -120,8 +122,21 @@ for metal in do_layers
   tp.input("MTPMK", $ly, $top_cell.cell_index, MTPMK)
   tp.input("OTP_MK", $ly, $top_cell.cell_index, OTP_MK)
 
+  tp.input("Poly2", $ly, $top_cell.cell_index, Poly2)
+  tp.input("Metal1", $ly, $top_cell.cell_index, Metal1)
+  tp.input("Metal2", $ly, $top_cell.cell_index, Metal2)
+  tp.input("Metal3", $ly, $top_cell.cell_index, Metal3)
+  tp.input("Metal4", $ly, $top_cell.cell_index, Metal4)
+  tp.input("Metal5", $ly, $top_cell.cell_index, Metal5)
+
   # DM.3
   tp.var("space_to_Metal", 2.0 / $ly.dbu)
+  
+  # DM.4_DM.6
+  tp.var("space_to_subsequent_Metal", 2.0 / $ly.dbu)
+  
+  # DM.5_DM.7
+  tp.var("space_to_previous_Metal", 2.0 / $ly.dbu)
   
   # DM.8
   tp.var("space_to_FuseTop",      6.0 / $ly.dbu)
@@ -146,6 +161,8 @@ for metal in do_layers
   
   var fill_region = _tile & _frame
                     - Metal.sized(space_to_Metal)
+                    - previous_metal.sized(space_to_previous_Metal)
+                    - subsequent_metal.sized(space_to_subsequent_Metal)
                     - FuseTop.sized(space_to_FuseTop)
                     - POLYFUSE.sized(space_to_POLYFUSE)
                     - FUSEWINDOW_D.sized(space_to_FUSEWINDOW_D)

@@ -82,7 +82,19 @@ if DUMMY
   dpf11_l1 = poly2_dummy.separation(ndmy, 29.7.um, euclidian)
   dpf11_l1.output('DPF.11', 'DPF.11 : Space to dummy COMP exclude layer (NDMY): 29.7')
   dpf11_l1.forget
+
+  # Rule DPF.12: Space of dummy poly2 fill to active circuit metal1: 2
+  logger.info('Executing rule DPF.12')
+  dpf12_l1 = poly2_dummy.separation(metal1_drawn, 2.um, euclidian)
+  dpf12_l1.output('DPF.12', 'DPF.12 : Space of dummy poly2 fill to active circuit metal1: 2')
+  dpf12_l1.forget
   
+  # Rule DPF.13: Space of dummy poly2 fill to active circuit metal2: 2
+  logger.info('Executing rule DPF.13')
+  dpf13_l1 = poly2_dummy.separation(metal2_drawn, 2.um, euclidian)
+  dpf13_l1.output('DPF.13', 'DPF.13 : Space of dummy poly2 fill to active circuit metal2: 2')
+  dpf13_l1.forget
+
   # Rule DPF.14: Minimum dummy poly2 space to IND_MK layer: 3
   logger.info('Executing rule DPF.14')
   dpf14_l1 = poly2_dummy.separation(ind_mk, 3.um, euclidian)

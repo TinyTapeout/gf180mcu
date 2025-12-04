@@ -1,5 +1,5 @@
 # tile size in micron
-tile_size = 400.0
+tile_size = 500.0
 
 # origin of the fill pattern
 # For "enhanced fill use":
@@ -63,6 +63,9 @@ tp.input("RES_MK", $ly, $top_cell.cell_index, RES_MK)
 tp.input("Pad", $ly, $top_cell.cell_index, Pad)
 tp.input("IND_MK", $ly, $top_cell.cell_index, IND_MK)
 
+tp.input("Metal1", $ly, $top_cell.cell_index, Metal1)
+tp.input("Metal2", $ly, $top_cell.cell_index, Metal2)
+
 tp.var("line_space", line_space / $ly.dbu)
 
 # DPF.4
@@ -90,6 +93,12 @@ tp.var("space_to_Pad", 6.7 / $ly.dbu)
 
 # DPF.11
 tp.var("space_to_NDMY", 29.7 / $ly.dbu)
+
+# DPF.12
+tp.var("space_to_Metal1", 2 / $ly.dbu)
+
+# DPF.13
+tp.var("space_to_Metal2", 2 / $ly.dbu)
 
 # DPF.14
 tp.var("space_to_IND_MK", 3.0 / $ly.dbu)
@@ -134,6 +143,8 @@ var fill_region = _tile & _frame
                   - scribe_line_ring
                   - RES_MK.sized(space_to_RES_MK)
                   - Pad.sized(space_to_Pad)
+                  - Metal1.sized(space_to_Metal1)
+                  - Metal2.sized(space_to_Metal2)
                   - IND_MK.sized(space_to_IND_MK)
                   - MTPMK.sized(space_to_MTPMK)
                   - NDMY.sized(space_to_NDMY)

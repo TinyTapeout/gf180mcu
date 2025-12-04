@@ -16,7 +16,9 @@
 # limitations under the License.
 ################################################################################################
 
-if DUMMY && (METAL_LEVEL == '6LM')
+# This is hardcoded for 5 Metal layers
+
+if DUMMY && (METAL_LEVEL == '5LM')
   #================================================
   #----------------- Dummy METAL5 -----------------
   #================================================
@@ -32,6 +34,12 @@ if DUMMY && (METAL_LEVEL == '6LM')
   dm5_3_l1 = metal5_dummy.separation(metal5, 2.um, euclidian)
   dm5_3_l1.output('DM5.3', 'DM5.3 : Minimum space between dummy metal and circuit Metal line: 2')
   dm5_3_l1.forget
+
+  # Rule DM5.5_DM5.7: Dummy Metal space (no overlap) to Previous Metal layer: 1
+  logger.info('Executing rule DM5.5_DM5.7')
+  dm5_5_dm5_7_l1 = metal5_dummy.separation(metal4_drawn, 1.um, euclidian)
+  dm5_5_dm5_7_l1.output('DM5.5_DM5.7', 'DM5.5_DM5.7 : Dummy Metal space (no overlap) to Previous Metal layer: 1')
+  dm5_5_dm5_7_l1.forget
 
   # Rule DM5.8: Minimum space between dummy metal and FuseTop, POLYFUSE, FUSEWINDOW_D, PMNDMY, MTPMK, OTP_MK: 6
   logger.info('Executing rule DM5.8')
