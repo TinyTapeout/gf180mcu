@@ -188,17 +188,10 @@ count = contact.count
 logger.info("contact has #{count} polygons")
 polygons_count += count
 
-metal1_drawn = get_polygons(34, 0)
-count = metal1_drawn.count
-logger.info("metal1_drawn has #{count} polygons")
+metal1 = get_polygons(34, 0)
+count = metal1.count
+logger.info("metal1 has #{count} polygons")
 polygons_count += count
-
-metal1_dummy = get_polygons(34, 4)
-count = metal1_dummy.count
-logger.info("metal1_dummy has #{count} polygons")
-polygons_count += count
-
-metal1         = metal1_drawn + metal1_dummy
 
 metal1_label = get_polygons(34, 10)
 count = metal1_label.count
@@ -220,17 +213,10 @@ count = via1.count
 logger.info("via1 has #{count} polygons")
 polygons_count += count
 
-metal2_drawn = get_polygons(36, 0)
-count = metal2_drawn.count
-logger.info("metal2_drawn has #{count} polygons")
+metal2 = get_polygons(36, 0)
+count = metal2.count
+logger.info("metal2 has #{count} polygons")
 polygons_count += count
-
-metal2_dummy = get_polygons(36, 4)
-count = metal2_dummy.count
-logger.info("metal2_dummy has #{count} polygons")
-polygons_count += count
-
-metal2 = metal2_drawn + metal2_dummy
 
 metal2_label = get_polygons(36, 10)
 count = metal2_label.count
@@ -254,17 +240,10 @@ when '3LM', '4LM', '5LM', '6LM'
   logger.info("via2 has #{count} polygons")
   polygons_count += count
 
-  metal3_drawn = get_polygons(42, 0)
-  count = metal3_drawn.count
-  logger.info("metal3_drawn has #{count} polygons")
+  metal3 = get_polygons(42, 0)
+  count = metal3.count
+  logger.info("metal3 has #{count} polygons")
   polygons_count += count
-
-  metal3_dummy = get_polygons(42, 4)
-  count = metal3_dummy.count
-  logger.info("metal3_dummy has #{count} polygons")
-  polygons_count += count
-
-  metal3 = metal3_drawn + metal3_dummy
 
   metal3_label = get_polygons(42, 10)
   count = metal3_label.count
@@ -289,17 +268,10 @@ when '4LM', '5LM', '6LM'
   logger.info("via3 has #{count} polygons")
   polygons_count += count
 
-  metal4_drawn = get_polygons(46, 0)
-  count = metal4_drawn.count
-  logger.info("metal4_drawn has #{count} polygons")
+  metal4 = get_polygons(46, 0)
+  count = metal4.count
+  logger.info("metal4 has #{count} polygons")
   polygons_count += count
-
-  metal4_dummy = get_polygons(46, 4)
-  count = metal4_dummy.count
-  logger.info("metal4_dummy has #{count} polygons")
-  polygons_count += count
-
-  metal4 = metal4_drawn + metal4_dummy
 
   metal4_label = get_polygons(46, 10)
   count = metal4_label.count
@@ -324,17 +296,10 @@ when '5LM', '6LM'
   logger.info("via4 has #{count} polygons")
   polygons_count += count
 
-  metal5_drawn = get_polygons(81, 0)
-  count = metal5_drawn.count
-  logger.info("metal5_drawn has #{count} polygons")
+  metal5 = get_polygons(81, 0)
+  count = metal5.count
+  logger.info("metal5 has #{count} polygons")
   polygons_count += count
-
-  metal5_dummy = get_polygons(81, 4)
-  count = metal5_dummy.count
-  logger.info("metal5_dummy has #{count} polygons")
-  polygons_count += count
-
-  metal5 = metal5_drawn + metal5_dummy
 
   metal5_label = get_polygons(81, 10)
   count = metal5_label.count
@@ -359,17 +324,10 @@ when '6LM'
   logger.info("via5 has #{count} polygons")
   polygons_count += count
 
-  metaltop_drawn = get_polygons(53, 0)
-  count = metaltop_drawn.count
-  logger.info("metaltop_drawn has #{count} polygons")
+  metaltop = get_polygons(53, 0)
+  count = metaltop.count
+  logger.info("metaltop has #{count} polygons")
   polygons_count += count
-
-  metaltop_dummy = get_polygons(53, 4)
-  count = metaltop_dummy.count
-  logger.info("metaltop_dummy has #{count} polygons")
-  polygons_count += count
-
-  metaltop       = metaltop_drawn + metaltop_dummy
 
   metaltop_label = get_polygons(53, 10)
   count = metaltop_label.count
