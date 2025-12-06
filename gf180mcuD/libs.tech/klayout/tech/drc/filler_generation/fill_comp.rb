@@ -94,7 +94,7 @@ tp.var("um2", 2 / $ly.dbu)
 tp.var("um20", 20 / $ly.dbu)
 tp.var("um10", 10 / $ly.dbu)
 
-tp.output("to_fill", TilingOperator::new($ly, $top_cell, fill_cell.cell_index, fc_box_in_dbu, row_step_in_dbu, column_step_in_dbu, fc_origin_in_dbu))
+tp.output("to_fill", TilingOperator::new($ly, $fill_cell, fill_cell.cell_index, fc_box_in_dbu, row_step_in_dbu, column_step_in_dbu, fc_origin_in_dbu))
 
 # perform the computations inside the tiling processor through "expression" syntax
 # (see https://www.klayout.de/doc-qt4/about/expressions.html)

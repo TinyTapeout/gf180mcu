@@ -53,19 +53,21 @@ if not $threads
   $threads ||= Etc.nprocessors
 end
 
+$fill_cell =	 $ly.create_cell("FILL")
+
 # This is an object which will receive the regions to tile
 # It is driven single-threaded which is good since the tiling function
 # isn't multi-threading safe
 class TilingOperator < RBA::TileOutputReceiver
-  def initialize(ly, top_cell, *fill_args)
+  def initialize(ly, fill_cell, *fill_args)
     @ly = ly
-    @top_cell = top_cell
+    @fill_cell = fill_cell
     @fill_args = fill_args
   end
   def put(ix, iy, tile, obj, dbu, clip)
     # This is the core function. It creates the fill.
     # For details see https://www.klayout.de/doc-qt4/code/class_Cell.html#k_63
-    @top_cell.fill_region(obj, *@fill_args)
+    @fill_cell.fill_region(obj, *@fill_args)
   end
 end
 
