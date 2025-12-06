@@ -23,6 +23,12 @@ if DUMMY
 
   logger.info('Starting Dummy Poly2 derivations')
 
+  # Rule DPF.1: Dummy Poly2 is generated on top of dummy COMP.
+  logger.info('Executing rule DPF.1')
+  dpf1_l1 = poly2_dummy.not_covering(comp_dummy)
+  dpf1_l1.output('DPF.1', 'DPF.1 : Dummy Poly2 is generated on top of dummy COMP.')
+  dpf1_l1.forget
+
   # Rule DPF.2b: Resulted minimum space between Dummy poly in all directions: 1.1
   logger.info('Executing rule DPF.2b')
   dpf2b_l1 = poly2_dummy.space(1.1.um, euclidian)
