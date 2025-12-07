@@ -1,5 +1,8 @@
 require 'etc'
 
+# No stdout buffering
+$stdout.sync = true
+
 puts "Reading layout…"
 
 $ly = RBA::Layout::new()
@@ -46,14 +49,16 @@ OTP_MK        = $ly.layer(173, 5)
 NDMY          = $ly.layer(111, 5)
 
 # chip's bbox (boundary to fill)
-$chip = $ly.top_cell().dbbox() #RBA::DBox::new(0, 0, 3880.0, 5070.0) # TODO
+$chip = $ly.top_cell().dbbox()
 
 # threads
 if not $threads
   $threads ||= Etc.nprocessors
 end
 
-$fill_cell =	 $ly.create_cell("FILL")
+$fill_cell_comp =	 $ly.create_cell("COMP_FILL")
+$fill_cell_poly2 =	 $ly.create_cell("POLY2_FILL")
+$fill_cell_metal =	 $ly.create_cell("METAL_FILL")
 
 # This is an object which will receive the regions to tile
 # It is driven single-threaded which is good since the tiling function
@@ -81,6 +86,11 @@ require_relative 'fill_poly2.rb'
 
 puts "Starting Metal fill…"
 require_relative 'fill_metal.rb'
+
+# Insert fill into top level
+$top_cell.insert(RBA::CellInstArray::new($fill_cell_comp, RBA::Trans::new(0,0)))
+$top_cell.insert(RBA::CellInstArray::new($fill_cell_poly2, RBA::Trans::new(0,0)))
+$top_cell.insert(RBA::CellInstArray::new($fill_cell_metal, RBA::Trans::new(0,0)))
 
 puts "Done!"
 
