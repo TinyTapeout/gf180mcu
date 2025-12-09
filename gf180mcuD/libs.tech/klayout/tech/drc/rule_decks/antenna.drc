@@ -399,8 +399,8 @@ logger.info('Starting GF180MCU ANTENNA layer derivations.')
 tgate      = poly2.and(comp).not(res_mk)
 thin_gate  = tgate.not(dualgate)
 thick_gate = tgate.and(dualgate)
-n_diode    = nplus.and(comp).not(nwell)
-p_diode    = pplus.and(comp).and(nwell)
+n_diode    = nplus.and(comp).not(poly2).not(nwell)
+p_diode    = pplus.and(comp).not(poly2).and(nwell)
 diodes     = n_diode | p_diode
 
 thin_gate_count   = thin_gate.count
