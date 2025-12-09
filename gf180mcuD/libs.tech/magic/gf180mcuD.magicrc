@@ -17,7 +17,7 @@ catch {random seed}
 # Allow override of PDK path from environment variable PDK_ROOT
 # "file nativename" guards against a local PDK_ROOT with "~" in the name
 if {[catch {set PDK_ROOT [file nativename $env(PDK_ROOT)]}]} {
-    set PDK_ROOT $::env(HOME)/work/open_pdks/open_pdks/root/ciel/gf180mcu/build/9608f38a18c41de49402a7b91daaed6b69317398
+    set PDK_ROOT $::env(HOME)/work/open_pdks/open_pdks/root/ciel/gf180mcu/build/8fa792c6f7db44c0873c619d62190496b89c0083
 }
 
 # loading technology
@@ -55,4 +55,5 @@ addpath ${PDK_ROOT}/gf180mcuD/libs.ref/gf180mcu_fd_io/${MAGTYPE}
 addpath ${PDK_ROOT}/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/${MAGTYPE}
 addpath ${PDK_ROOT}/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/${MAGTYPE}
 addpath ${PDK_ROOT}/gf180mcuD/libs.ref/gf180mcu_ocd_io/${MAGTYPE}
+addpath ${PDK_ROOT}/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/${MAGTYPE}
 
