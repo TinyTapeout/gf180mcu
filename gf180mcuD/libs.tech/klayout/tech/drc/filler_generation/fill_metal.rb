@@ -51,7 +51,7 @@ line_spaces = {
   "Metal5" => 2
 }
 
-# DM.5 & DM.7
+# DM.5_DM.7
 previous_metals = {
   "Metal1" => Poly2,
   "Metal2" => Metal1,
@@ -62,13 +62,23 @@ previous_metals = {
 
 Empty_Layer = $ly.insert_layer(RBA::LayerInfo::new())
 
-# DM.4 & DM.6
+# DM.4_DM.6
 subsequent_metals = {
   "Metal1" => Metal2,
   "Metal2" => Metal3,
   "Metal3" => Metal4,
   "Metal4" => Metal5,
   "Metal5" => Empty_Layer
+}
+
+# Insert dummy metal fill as active metal
+# Ignore DM.5_DM.7 and DM.4_DM.6
+metals_as_active = {
+  "Metal1" => $Metal1_active,
+  "Metal2" => $Metal2_active,
+  "Metal3" => $Metal3_active,
+  "Metal4" => $Metal4_active,
+  "Metal5" => $Metal5_active
 }
 
 # DM.9
@@ -82,7 +92,12 @@ fc_origins = {
 
 for metal in do_layers
 
-  fill_layer = fill_layers[metal]
+  if metals_as_active[metal]
+    fill_layer = metal_layers[metal]
+  else
+    fill_layer = fill_layers[metal]
+  end
+
   fc_name = fc_names[metal]
 
   fill_cell = $ly.cell(fc_name)
@@ -153,25 +168,46 @@ for metal in do_layers
   
   tp.output("to_fill", TilingOperator::new($ly, $fill_cell_metal, fill_cell.cell_index, fc_box_in_dbu, row_step_in_dbu, column_step_in_dbu, fc_origin_in_dbu))
 
+  if metals_as_active[metal]
+      tp.queue("
+# Not a dedicated rule, but it makes sense here as well
+var scribe_line_ring = _frame - _frame.sized(-space_to_scribe_line);
+
+var fill_region = _tile & _frame
+                  - Metal.sized(space_to_Metal)
+                  - FuseTop.sized(space_to_FuseTop)
+                  - POLYFUSE.sized(space_to_POLYFUSE)
+                  - FUSEWINDOW_D.sized(space_to_FUSEWINDOW_D)
+                  - PMNDMY.sized(space_to_PMNDMY)
+                  - MTPMK.sized(space_to_MTPMK)
+                  - OTP_MK.sized(space_to_OTP_MK)
+                  - scribe_line_ring;
+
+_output(to_fill, fill_region)")
+  else
+      tp.queue("
+# Not a dedicated rule, but it makes sense here as well
+var scribe_line_ring = _frame - _frame.sized(-space_to_scribe_line);
+
+var fill_region = _tile & _frame
+                  - Metal.sized(space_to_Metal)
+                  - previous_metal.sized(space_to_previous_Metal)
+                  - subsequent_metal.sized(space_to_subsequent_Metal)
+                  - FuseTop.sized(space_to_FuseTop)
+                  - POLYFUSE.sized(space_to_POLYFUSE)
+                  - FUSEWINDOW_D.sized(space_to_FUSEWINDOW_D)
+                  - PMNDMY.sized(space_to_PMNDMY)
+                  - MTPMK.sized(space_to_MTPMK)
+                  - OTP_MK.sized(space_to_OTP_MK)
+                  - scribe_line_ring;
+
+_output(to_fill, fill_region)")
+
+  end
+
   # perform the computations inside the tiling processor through "expression" syntax
   # (see https://www.klayout.de/doc-qt4/about/expressions.html)
-  tp.queue("
-  # Not a dedicated rule, but it makes sense here as well
-  var scribe_line_ring = _frame - _frame.sized(-space_to_scribe_line);
-  
-  var fill_region = _tile & _frame
-                    - Metal.sized(space_to_Metal)
-                    - previous_metal.sized(space_to_previous_Metal)
-                    - subsequent_metal.sized(space_to_subsequent_Metal)
-                    - FuseTop.sized(space_to_FuseTop)
-                    - POLYFUSE.sized(space_to_POLYFUSE)
-                    - FUSEWINDOW_D.sized(space_to_FUSEWINDOW_D)
-                    - PMNDMY.sized(space_to_PMNDMY)
-                    - MTPMK.sized(space_to_MTPMK)
-                    - OTP_MK.sized(space_to_OTP_MK)
-                    - scribe_line_ring;
 
-  _output(to_fill, fill_region)")
 
   # Ignore DM.4 to DM.7 for now
   # With those it's almost impossible to fill a digital design...
