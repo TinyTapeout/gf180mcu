@@ -33,6 +33,18 @@ if DUMMY && (METAL_LEVEL == '5LM' || METAL_LEVEL == '6LM')
   dm4_3_l1.output('DM4.3', 'DM4.3 : Minimum space between dummy metal and circuit Metal line: 2')
   dm4_3_l1.forget
 
+  # Rule DM4.4_DM4.6: Dummy Metal space (no overlap) to Subsequent Metal layer: 1
+  logger.info('Executing rule DM4.4_DM4.6')
+  dm4_4_dm4_6_l1 = metal4_dummy.separation(metal5_drawn, 1.um, euclidian)
+  dm4_4_dm4_6_l1.output('DM4.4_DM4.6', 'DM4.4_DM4.6 : Dummy Metal space (no overlap) to Subsequent Metal layer: 1')
+  dm4_4_dm4_6_l1.forget
+
+  # Rule DM4.5_DM4.7: Dummy Metal space (no overlap) to Previous Metal layer: 1
+  logger.info('Executing rule DM4.5_DM4.7')
+  dm4_5_dm4_7_l1 = metal4_dummy.separation(metal3_drawn, 1.um, euclidian)
+  dm4_5_dm4_7_l1.output('DM4.5_DM4.7', 'DM4.5_DM4.7 : Dummy Metal space (no overlap) to Previous Metal layer: 1')
+  dm4_5_dm4_7_l1.forget
+
   # Rule DM4.8: Minimum space between dummy metal and FuseTop, POLYFUSE, FUSEWINDOW_D, PMNDMY, MTPMK, OTP_MK: 6
   logger.info('Executing rule DM4.8')
   dm4_8_l1 = metal4_dummy.separation(fusetop, 6.um, euclidian)

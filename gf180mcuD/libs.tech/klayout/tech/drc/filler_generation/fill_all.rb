@@ -1,5 +1,8 @@
 require 'etc'
 
+# No stdout buffering
+$stdout.sync = true
+
 puts "Reading layout…"
 
 $ly = RBA::Layout::new()
@@ -46,26 +49,30 @@ OTP_MK        = $ly.layer(173, 5)
 NDMY          = $ly.layer(111, 5)
 
 # chip's bbox (boundary to fill)
-$chip = $ly.top_cell().dbbox() #RBA::DBox::new(0, 0, 3880.0, 5070.0) # TODO
+$chip = $ly.top_cell().dbbox()
 
 # threads
 if not $threads
   $threads ||= Etc.nprocessors
 end
 
+$fill_cell_comp =	 $ly.create_cell("COMP_FILL")
+$fill_cell_poly2 =	 $ly.create_cell("POLY2_FILL")
+$fill_cell_metal =	 $ly.create_cell("METAL_FILL")
+
 # This is an object which will receive the regions to tile
 # It is driven single-threaded which is good since the tiling function
 # isn't multi-threading safe
 class TilingOperator < RBA::TileOutputReceiver
-  def initialize(ly, top_cell, *fill_args)
+  def initialize(ly, fill_cell, *fill_args)
     @ly = ly
-    @top_cell = top_cell
+    @fill_cell = fill_cell
     @fill_args = fill_args
   end
   def put(ix, iy, tile, obj, dbu, clip)
     # This is the core function. It creates the fill.
     # For details see https://www.klayout.de/doc-qt4/code/class_Cell.html#k_63
-    @top_cell.fill_region(obj, *@fill_args)
+    @fill_cell.fill_region(obj, *@fill_args)
   end
 end
 
@@ -79,6 +86,11 @@ require_relative 'fill_poly2.rb'
 
 puts "Starting Metal fill…"
 require_relative 'fill_metal.rb'
+
+# Insert fill into top level
+$top_cell.insert(RBA::CellInstArray::new($fill_cell_comp, RBA::Trans::new(0,0)))
+$top_cell.insert(RBA::CellInstArray::new($fill_cell_poly2, RBA::Trans::new(0,0)))
+$top_cell.insert(RBA::CellInstArray::new($fill_cell_metal, RBA::Trans::new(0,0)))
 
 puts "Done!"
 

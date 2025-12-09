@@ -1,5 +1,5 @@
 # tile size in micron
-tile_size = 400.0
+tile_size = 400
 
 # origin of the fill pattern
 # For "enhanced fill use":
@@ -63,6 +63,12 @@ tp.input("IND_MK", $ly, $top_cell.cell_index, IND_MK)
 
 tp.var("line_space", line_space / $ly.dbu)
 
+# DPF.1
+# Make sure to exclude some space at the tile border
+# to ensure there will be no dummy poly2 without a
+# dummy comp
+tp.var("Poly2_extension", 0.3 / $ly.dbu)
+
 # DCF.4
 tp.var("space_to_COMP", 3.5 / $ly.dbu)
 # DCF.5
@@ -94,7 +100,7 @@ tp.var("um2", 2 / $ly.dbu)
 tp.var("um20", 20 / $ly.dbu)
 tp.var("um10", 10 / $ly.dbu)
 
-tp.output("to_fill", TilingOperator::new($ly, $top_cell, fill_cell.cell_index, fc_box_in_dbu, row_step_in_dbu, column_step_in_dbu, fc_origin_in_dbu))
+tp.output("to_fill", TilingOperator::new($ly, $fill_cell_comp, fill_cell.cell_index, fc_box_in_dbu, row_step_in_dbu, column_step_in_dbu, fc_origin_in_dbu))
 
 # perform the computations inside the tiling processor through "expression" syntax
 # (see https://www.klayout.de/doc-qt4/about/expressions.html)
@@ -113,7 +119,8 @@ var Dualgate_ring = Dualgate.sized(space_to_Dualgate) - Dualgate.sized(-space_to
 # We expect the scribe line to be direct$ly outside of the die
 var scribe_line_ring = _frame - _frame.sized(-space_to_scribe_line);
 
-var fill_region = _tile & _frame 
+var fill_region = _tile & _frame
+                  - _tile.not(_tile.sized(-Poly2_extension))
                   - COMP_20um_spacing.sized(space_to_COMP)
                   - Poly2.sized(space_to_Poly2)
                   - Nwell_ring
