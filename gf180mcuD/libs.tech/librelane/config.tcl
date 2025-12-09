@@ -180,6 +180,7 @@ set ::env(KLAYOUT_ANTENNA_OPTIONS) [dict create]
 dict set ::env(KLAYOUT_ANTENNA_OPTIONS) run_mode "deep"
 
 set ::env(KLAYOUT_FILLER_SCRIPT) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/klayout/tech/drc/filler_generation/fill_all.rb"
+set ::env(KLAYOUT_FILLER_OPTIONS) [dict create]
 
 set ::env(KLAYOUT_LVS_SCRIPT) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/klayout/tech/lvs/gf180mcu.lvs"
 set ::env(KLAYOUT_LVS_OPTIONS) [dict create run_mode deep]
