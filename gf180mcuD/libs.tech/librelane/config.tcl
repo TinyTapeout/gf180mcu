@@ -166,6 +166,7 @@ set ::env(KLAYOUT_DRC_OPTIONS) [dict create]
 dict set ::env(KLAYOUT_DRC_OPTIONS) feol true
 dict set ::env(KLAYOUT_DRC_OPTIONS) beol true
 dict set ::env(KLAYOUT_DRC_OPTIONS) dummy true
+dict set ::env(KLAYOUT_DRC_OPTIONS) dummy_no_sub_prev true
 dict set ::env(KLAYOUT_DRC_OPTIONS) offgrid true
 dict set ::env(KLAYOUT_DRC_OPTIONS) conn_drc true
 dict set ::env(KLAYOUT_DRC_OPTIONS) wedge true
