@@ -42,6 +42,14 @@ fc_names = {
   "Metal5" => "Metal5_fill_cell"
 }
 
+fill_cells = {
+  "Metal1" => $fill_cell_metal1,
+  "Metal2" => $fill_cell_metal2,
+  "Metal3" => $fill_cell_metal3,
+  "Metal4" => $fill_cell_metal4,
+  "Metal5" => $fill_cell_metal5,
+}
+
 # DM.2a, DM.2c
 line_spaces = {
   "Metal1" => 1.2,
@@ -73,12 +81,12 @@ subsequent_metals = {
 
 # Insert dummy metal fill as active metal
 # Ignore DM.5_DM.7 and DM.4_DM.6
-metals_as_active = {
-  "Metal1" => $Metal1_active,
-  "Metal2" => $Metal2_active,
-  "Metal3" => $Metal3_active,
-  "Metal4" => $Metal4_active,
-  "Metal5" => $Metal5_active
+metals_ignore_active = {
+  "Metal1" => $Metal1_ignore_active,
+  "Metal2" => $Metal2_ignore_active,
+  "Metal3" => $Metal3_ignore_active,
+  "Metal4" => $Metal4_ignore_active,
+  "Metal5" => $Metal5_ignore_active
 }
 
 # DM.9
@@ -92,12 +100,7 @@ fc_origins = {
 
 for metal in do_layers
 
-  if metals_as_active[metal]
-    fill_layer = metal_layers[metal]
-  else
-    fill_layer = fill_layers[metal]
-  end
-
+  fill_layer = fill_layers[metal]
   fc_name = fc_names[metal]
 
   fill_cell = $ly.cell(fc_name)
@@ -166,9 +169,9 @@ for metal in do_layers
   tp.var("um1", 1 / $ly.dbu)
   tp.var("um2", 2 / $ly.dbu)
   
-  tp.output("to_fill", TilingOperator::new($ly, $fill_cell_metal, fill_cell.cell_index, fc_box_in_dbu, row_step_in_dbu, column_step_in_dbu, fc_origin_in_dbu))
+  tp.output("to_fill", TilingOperator::new($ly, fill_cells[metal], fill_cell.cell_index, fc_box_in_dbu, row_step_in_dbu, column_step_in_dbu, fc_origin_in_dbu))
 
-  if metals_as_active[metal]
+  if metals_ignore_active[metal]
       tp.queue("
 # Not a dedicated rule, but it makes sense here as well
 var scribe_line_ring = _frame - _frame.sized(-space_to_scribe_line);

@@ -58,7 +58,22 @@ end
 
 $fill_cell_comp =	 $ly.create_cell("COMP_FILL")
 $fill_cell_poly2 =	 $ly.create_cell("POLY2_FILL")
-$fill_cell_metal =	 $ly.create_cell("METAL_FILL")
+$fill_cell_metal1 =	 $ly.create_cell("METAL1_FILL")
+$fill_cell_metal2 =	 $ly.create_cell("METAL2_FILL")
+$fill_cell_metal3 =	 $ly.create_cell("METAL3_FILL")
+$fill_cell_metal4 =	 $ly.create_cell("METAL4_FILL")
+$fill_cell_metal5 =	 $ly.create_cell("METAL5_FILL")
+
+# Insert fill cells into top level
+$ly.start_changes()
+$top_cell.insert(RBA::CellInstArray::new($fill_cell_comp, RBA::Trans::new(0,0)))
+$top_cell.insert(RBA::CellInstArray::new($fill_cell_poly2, RBA::Trans::new(0,0)))
+$top_cell.insert(RBA::CellInstArray::new($fill_cell_metal1, RBA::Trans::new(0,0)))
+$top_cell.insert(RBA::CellInstArray::new($fill_cell_metal2, RBA::Trans::new(0,0)))
+$top_cell.insert(RBA::CellInstArray::new($fill_cell_metal3, RBA::Trans::new(0,0)))
+$top_cell.insert(RBA::CellInstArray::new($fill_cell_metal4, RBA::Trans::new(0,0)))
+$top_cell.insert(RBA::CellInstArray::new($fill_cell_metal5, RBA::Trans::new(0,0)))
+$ly.end_changes()
 
 # This is an object which will receive the regions to tile
 # It is driven single-threaded which is good since the tiling function
@@ -86,11 +101,6 @@ require_relative 'fill_poly2.rb'
 
 puts "Starting Metal fill…"
 require_relative 'fill_metal.rb'
-
-# Insert fill into top level
-$top_cell.insert(RBA::CellInstArray::new($fill_cell_comp, RBA::Trans::new(0,0)))
-$top_cell.insert(RBA::CellInstArray::new($fill_cell_poly2, RBA::Trans::new(0,0)))
-$top_cell.insert(RBA::CellInstArray::new($fill_cell_metal, RBA::Trans::new(0,0)))
 
 puts "Done!"
 

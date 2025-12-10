@@ -178,6 +178,11 @@ DUMMY = bool_check?($dummy)
 
 logger.info("DUMMY enabled: #{DUMMY}")
 
+# DUMMY
+DUMMY_SUB_PREV = !bool_check?($dummy_no_sub_prev)
+
+logger.info("DUMMY_SUB_PREV enabled: #{DUMMY_SUB_PREV}")
+
 ## SLOW_VIA
 SLOW_VIA = bool_check?($slow_via)
 
